@@ -18,16 +18,6 @@
 
 <br />
 
-### <b>Bootstrap</b>
-
-```ts
-npx @ricardo-jrm/pow-soulexplorer
-```
-
-Boilerplate `Next` web app bootstrapped with all necessary configs and workflows
-
-<br />
-
 ### <b>Usage</b>
 
 ```ts
@@ -46,6 +36,17 @@ yarn start
 // export app
 yarn export
 ```
+
+<br />
+
+### <b>Dependencies</b>
+
+ - <b>Next Web App Boilerplate: [🌌 @ricardo-jrm/nebula](https://github.com/ricardo-jrm/nebula)</b>
+ - <b>React Utility Hooks: [🌘 @ricardo-jrm/reaper](https://github.com/ricardo-jrm/reaper)</b>
+ - <b>React UI Components and Themes: [🔥 @ricardo-jrm/fury](https://github.com/ricardo-jrm/fury)</b>
+ - <b>React Meta Data Handler: [⚫ @ricardo-jrm/pain](https://github.com/ricardo-jrm/pain)</b>
+ - <b>React API Client: [🌸 @ricardo-jrm/empathy](https://github.com/ricardo-jrm/empathy)</b>
+ - <b>React Lightweight Intl: [☁ @ricardo-jrm/echo](https://github.com/ricardo-jrm/echo)</b>
 
 <br />
 
