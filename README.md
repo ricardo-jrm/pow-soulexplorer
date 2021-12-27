@@ -2,7 +2,7 @@
 
 # 👻 `@ricardo-jrm/pow-soulexplorer`
 
-<b>Next web app boilerplate</b>
+<b>Proof of work a new Explorer for the lovely folks at Phantasma Chain</b>
 
 ![build](https://img.shields.io/github/workflow/status/ricardo-jrm/pow-soulexplorer/Continuous%20Integration?style=for-the-badge)
 ![license](https://img.shields.io/github/license/ricardo-jrm/pow-soulexplorer?style=for-the-badge)
