@@ -2,16 +2,16 @@ import React from 'react';
 import { ExampleComponent } from '../../components/example';
 
 /**
- * HomeViewProps
+ * ViewExampleProps
  */
-interface HomeViewProps {
+interface ViewExampleProps {
   text: string;
 }
 
 /**
- * HomeView
+ * ViewExample
  */
-export const HomeView = ({ text }: HomeViewProps) => (
+export const ViewExample = ({ text }: ViewExampleProps) => (
   <div>
     <ExampleComponent text={text} />
   </div>

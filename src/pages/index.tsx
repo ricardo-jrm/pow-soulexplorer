@@ -1,9 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import { HomeView } from '../containers/example';
+import { ViewHome } from '../containers/ViewHome';
 
-export const HomePage: NextPage = () => (
-  <HomeView text="Hello World from Nebula" />
-);
+export const HomePage: NextPage = () => <ViewHome />;
 
 export default HomePage;
