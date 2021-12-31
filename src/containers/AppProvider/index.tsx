@@ -1,16 +1,9 @@
 import React from 'react';
 import { EchoProvider, EchoRecord } from '@ricardo-jrm/echo';
-import { FuryProvider, FuryRecord } from '@ricardo-jrm/fury';
-import { PainProvider, PainRecord } from '@ricardo-jrm/pain';
-
-const metas: PainRecord = {
-  soul: {
-    name: 'SOUL',
-  },
-  kcal: {
-    name: 'KCAL',
-  },
-};
+import { FuryProvider } from '@ricardo-jrm/fury';
+import { PainProvider } from '@ricardo-jrm/pain';
+import { metas } from '../../cfg/metas';
+import { themes } from '../../cfg/themes';
 
 const locales: EchoRecord = {
   en: {
@@ -18,39 +11,6 @@ const locales: EchoRecord = {
   },
   pt: {
     example: 'exemplo pt',
-  },
-};
-
-const themes: FuryRecord = {
-  soul: {
-    palette: {
-      primary: {
-        main: '#037abd',
-      },
-    },
-  },
-  'soul-dark': {
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#037abd',
-      },
-    },
-  },
-  kcal: {
-    palette: {
-      primary: {
-        main: '#d02525',
-      },
-    },
-  },
-  'kcal-dark': {
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#d02525',
-      },
-    },
   },
 };
 
