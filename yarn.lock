@@ -2858,10 +2858,10 @@
   dependencies:
     numeral "^2.0.6"
 
-"@ricardo-jrm/pain@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@ricardo-jrm/pain/-/pain-2.0.1.tgz#e976b16a012b02cadf1879b7b6e23603868e5413"
-  integrity sha512-theHjP3AheHBAuv8CPkEAw7/IQS07xzNWbxx1XhXqyBskgPilVXX5vly8mFp4Sjl4t5LBWVoH5iap6nzrKNCzg==
+"@ricardo-jrm/pain@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@ricardo-jrm/pain/-/pain-2.1.0.tgz#0212ec6ab46c7bd7ff1522799919f7837f83cd4f"
+  integrity sha512-pgIF2XlJFq6X+wkpFOqlbgUT0YU3b6rPwUPwyrtFqkFH6jD6tjbsN2f+NR85VuVpE/YUC6HW/MQJmVleOAjx7Q==
   dependencies:
     "@ricardo-jrm/use-local-state" "^1.0.1"
     react "^17.0.2"
