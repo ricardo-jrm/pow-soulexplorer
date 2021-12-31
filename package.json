@@ -105,7 +105,7 @@
     "@ricardo-jrm/echo": "^2.0.1",
     "@ricardo-jrm/empathy": "^1.0.1",
     "@ricardo-jrm/fury": "^3.0.3",
-    "@ricardo-jrm/pain": "^2.0.1",
+    "@ricardo-jrm/pain": "^2.1.0",
     "@ricardo-jrm/reaper": "^1.0.0",
     "next": "^12.0.7",
     "react": "^17.0.2",
