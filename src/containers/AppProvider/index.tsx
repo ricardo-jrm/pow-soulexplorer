@@ -1,18 +1,10 @@
 import React from 'react';
-import { EchoProvider, EchoRecord } from '@ricardo-jrm/echo';
+import { EchoProvider } from '@ricardo-jrm/echo';
 import { FuryProvider } from '@ricardo-jrm/fury';
 import { PainProvider } from '@ricardo-jrm/pain';
 import { metas } from '../../cfg/metas';
 import { themes } from '../../cfg/themes';
-
-const locales: EchoRecord = {
-  en: {
-    example: 'example en',
-  },
-  pt: {
-    example: 'exemplo pt',
-  },
-};
+import { locales } from '../../cfg/locales';
 
 /**
  * AppProviderProps
