@@ -1,8 +1,5 @@
 /* eslint-disable no-nested-ternary */
 import React, { ImgHTMLAttributes } from 'react';
-// import NextImage, { ImageProps as NextImageProps } from 'next/image';
-
-// export const Image = (props: NextImageProps) => <NextImage {...props} />;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface ImageProps extends ImgHTMLAttributes<any> {
