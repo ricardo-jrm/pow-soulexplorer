@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 import { ExampleComponent, ExampleComponentProps } from '.';
 
 export default {
-  title: 'Example',
+  title: 'Lab/Example',
   component: ExampleComponent,
   parameters: {
     componentSubtitle: 'Component Example',
