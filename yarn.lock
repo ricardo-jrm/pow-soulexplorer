@@ -2867,10 +2867,10 @@
     react "^17.0.2"
     react-dom "^17.0.2"
 
-"@ricardo-jrm/reaper@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ricardo-jrm/reaper/-/reaper-1.0.0.tgz#527435b3b929dc9903e96839bafe6fbcfaf22a4c"
-  integrity sha512-6TVd29UfXByqyQm4xrBepJAe0oqg4hVDlzti1Zle1IEcaR+kXeujnzWMXcQpt+P+1Dntq+S6W2NOU/MUCP723g==
+"@ricardo-jrm/reaper@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@ricardo-jrm/reaper/-/reaper-1.0.1.tgz#2c90e0f4785d7c3a71e584b7203aa2b813e5a535"
+  integrity sha512-32UrdZgesrd/bojgFtm6Qbq0vK9vmipLOtX5+LexeZ2BS84VA6Ey5lqTwxoD+PU+dbWvu9pHDkYf53W8aDCZ7Q==
   dependencies:
     "@ricardo-jrm/use-color-converter" "^1.0.1"
     "@ricardo-jrm/use-date-format" "^1.0.1"
