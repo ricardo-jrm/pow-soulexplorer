@@ -127,19 +127,16 @@ export const Text = ({
 
     if (translate) {
       if (capitalize) {
-        if (capitalize === 'allWords') {
-          return stringCapitalize(echo(children as string), true);
-        }
-        return stringCapitalize(echo(children as string));
+        return stringCapitalize(
+          echo(children as string),
+          capitalize === 'allWords',
+        );
       }
       return echo(children as string);
     }
 
     if (capitalize) {
-      if (capitalize === 'allWords') {
-        return stringCapitalize(`${children}`, true);
-      }
-      return stringCapitalize(`${children}`);
+      return stringCapitalize(`${children}`, capitalize === 'allWords');
     }
 
     return `${children}`;
@@ -169,11 +166,7 @@ export const Text = ({
     let strDisplay = `${copy}`;
 
     if (truncate) {
-      if (truncate.keepLastWord) {
-        strDisplay = stringTruncate(copy, truncate.len, true);
-      } else {
-        strDisplay = stringTruncate(copy, truncate.len);
-      }
+      strDisplay = stringTruncate(copy, truncate.len, truncate.keepLastWord);
     }
 
     return (

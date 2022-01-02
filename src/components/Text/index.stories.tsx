@@ -82,20 +82,32 @@ export const FormatDateClipboard: Story<TextProps> = (args) => (
   <Text {...args} formatDate={new Date()} clipboard />
 );
 
-export const Translated: Story<TextProps> = (args) => (
+export const Translate: Story<TextProps> = (args) => (
   <Text {...args} translate>
     example
   </Text>
 );
 
-export const TranslatedLabel: Story<TextProps> = (args) => (
+export const TranslateLabel: Story<TextProps> = (args) => (
   <Text {...args} translate label="example" spacing={1}>
     example
   </Text>
 );
 
-export const TranslatedClipboard: Story<TextProps> = (args) => (
+export const TranslateClipboard: Story<TextProps> = (args) => (
   <Text {...args} translate clipboard spacing={1}>
+    example
+  </Text>
+);
+
+export const TranslateCapitalize: Story<TextProps> = (args) => (
+  <Text {...args} translate capitalize="allWords">
+    example
+  </Text>
+);
+
+export const TranslateCapitalizeCopy: Story<TextProps> = (args) => (
+  <Text {...args} translate capitalize="allWords" clipboard>
     example
   </Text>
 );
