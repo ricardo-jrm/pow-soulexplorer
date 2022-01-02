@@ -11,7 +11,14 @@ interface ImageProps extends ImgHTMLAttributes<any> {
 }
 
 // eslint-disable-next-line arrow-body-style
-export const Image = ({ src, title, alt, height, responsive }: ImageProps) => {
+export const Image = ({
+  src,
+  title,
+  alt,
+  height,
+  responsive,
+  style,
+}: ImageProps) => {
   return (
     <img
       src={src}
@@ -21,6 +28,7 @@ export const Image = ({ src, title, alt, height, responsive }: ImageProps) => {
         // eslint-disable-next-line no-unneeded-ternary
         height: height ? height : responsive ? 'auto !important' : undefined,
         maxWidth: responsive ? '100% !important' : undefined,
+        ...style,
       }}
     />
   );

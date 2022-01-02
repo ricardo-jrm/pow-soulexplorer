@@ -52,7 +52,8 @@ export const typography: ThemeOptions['typography'] = {
     fontFamily: '"PT Sans"',
   },
   button: {
-    fontFamily: '"PT Sans"',
+    fontFamily: '"Open Sans"',
+    textTransform: 'none',
   },
   caption: {
     fontFamily: '"PT Sans"',

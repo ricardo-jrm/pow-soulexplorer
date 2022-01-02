@@ -2,6 +2,7 @@ import React from 'react';
 import { useFury } from '@ricardo-jrm/fury';
 import { Box, Grid, Paper, Typography } from '@ricardo-jrm/fury/dist/mui';
 import { Image } from '../../components/Image';
+import { HEADER_HEIGHT } from '../../cfg/layout';
 
 /**
  * ViewHome
@@ -10,12 +11,16 @@ export const ViewHome = () => {
   const { furyActive } = useFury();
 
   return (
-    <Grid container sx={{ minHeight: '100vh' }} alignContent="center">
+    <Grid
+      container
+      sx={{ minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
+      alignContent="center"
+    >
       <Grid
         item
         xs={12}
         container
-        sx={{ minHeight: '100vh' }}
+        sx={{ minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
         alignContent="center"
         spacing={3}
       >
