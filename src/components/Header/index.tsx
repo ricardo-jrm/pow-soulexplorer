@@ -87,7 +87,7 @@ export const Header = ({ height }: HeaderProps) => {
         <Grid item xs>
           <Grid container alignItems="center" spacing={1}>
             <Grid item>
-              <Box pt={1}>
+              <Box pt={0.5}>
                 <Tooltip title={echo('tooltip-nav-homepage')}>
                   <Box>
                     <Image
