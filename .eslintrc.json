@@ -89,6 +89,11 @@
     "react/jsx-curly-brace-presence": 0,
     "react/require-default-props": 0,
     "react/jsx-wrap-multilines": 0,
-    "max-len": 0
+    "max-len": 0,
+    "react/jsx-max-props-per-line": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "block-spacing": 0,
+    "brace-style": 0,
+    "react/jsx-closing-bracket-location": 0
   }
 }
