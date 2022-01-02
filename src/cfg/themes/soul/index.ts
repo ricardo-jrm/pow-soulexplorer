@@ -6,7 +6,9 @@ export const soul: ThemeOptions = {
   typography,
   palette: {
     primary: {
+      light: 'rgb(53, 148, 202)',
       main: '#037abd',
+      dark: 'rgb(2, 85, 132)',
     },
   },
   components: overrides,

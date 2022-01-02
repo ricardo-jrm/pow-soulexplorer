@@ -7,7 +7,9 @@ export const soulDark: ThemeOptions = {
   palette: {
     mode: 'dark',
     primary: {
-      main: '#037abd',
+      light: '#037abd',
+      main: 'rgb(2, 85, 132)',
+      dark: 'rgb(1, 59, 92)',
     },
   },
   components: overrides,

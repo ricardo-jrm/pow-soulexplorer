@@ -7,7 +7,9 @@ export const kcalDark: ThemeOptions = {
   palette: {
     mode: 'dark',
     primary: {
-      main: '#d02525',
+      light: '#d02525',
+      main: 'rgb(145, 25, 25)',
+      dark: 'rgb(101, 17, 17)',
     },
   },
   components: overrides,
