@@ -69,6 +69,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.4",
+    "@types/react-copy-to-clipboard": "^5.0.2",
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "@typescript-eslint/parser": "^5.1.0",
     "babel-jest": "^27.4.2",
