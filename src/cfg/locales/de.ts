@@ -2,6 +2,7 @@ import { EchoMsgs } from '@ricardo-jrm/echo';
 
 export const de: EchoMsgs = {
   example: 'beispiel de',
+  wip: '🚧 In Arbeit 🚧',
   'tooltip-locale': 'Sprache wechseln',
   'tooltip-darkmode': 'Dunkelmodus umschalten',
   'tooltip-search': 'Suche öffnen',
