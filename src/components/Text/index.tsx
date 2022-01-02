@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
+import NextLink from 'next/link';
 import {
   Typography,
   TypographyProps,
-  Box,
   Grid,
   GridSpacing,
+  Link as MuiLink,
 } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import {
@@ -80,7 +81,13 @@ export const Text = ({
 
   return (
     <Grid container spacing={spacing}>
-      {label && <Grid item>{translate ? echo(label) : label}</Grid>}
+      {label && (
+        <Grid item>
+          <Typography {...propsTypo}>
+            {translate ? echo(label) : label}
+          </Typography>
+        </Grid>
+      )}
       <Grid item>{result}</Grid>
     </Grid>
   );
