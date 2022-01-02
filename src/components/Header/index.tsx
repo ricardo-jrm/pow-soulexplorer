@@ -5,6 +5,7 @@ import {
   Box,
   Grid,
   IconButton,
+  Tooltip,
   Menu,
   MenuItem,
 } from '@ricardo-jrm/fury/dist/mui';
@@ -34,7 +35,6 @@ export interface HeaderProps {
 export const Header = ({ height }: HeaderProps) => {
   const { push } = useRouter();
   const { furyActive, furyActiveId, furySetById } = useFury();
-  const { palette } = furyActive;
   const { echo, echoActiveId, echoSetById } = useEcho();
   const { painActive, painSetById } = usePain();
 
@@ -64,85 +64,101 @@ export const Header = ({ height }: HeaderProps) => {
           <Grid container alignItems="center" spacing={1}>
             <Grid item>
               <Box pt={1}>
-                <Image
-                  src={painActive.logo as string}
-                  height="24px"
-                  onClick={() => push('/')}
-                  style={{
-                    cursor: 'pointer',
-                  }}
-                />
+                <Tooltip title={echo('tooltip-nav-homepage')}>
+                  <Box>
+                    <Image
+                      src={painActive.logo as string}
+                      height="24px"
+                      onClick={() => push('/')}
+                      style={{
+                        cursor: 'pointer',
+                      }}
+                    />
+                  </Box>
+                </Tooltip>
               </Box>
             </Grid>
             <Grid item>
-              <Text
-                variant="h5"
-                onClick={() => push('/')}
-                sx={{
-                  color: '#fff',
-                  cursor: 'pointer',
-                  fontWeight: 600,
-                }}
-              >
-                {painActive.name}
-              </Text>
+              <Tooltip title={echo('tooltip-nav-homepage')}>
+                <Box>
+                  <Text
+                    variant="h5"
+                    onClick={() => push('/')}
+                    sx={{
+                      color: '#fff',
+                      cursor: 'pointer',
+                      fontWeight: 600,
+                    }}
+                  >
+                    {painActive.name}
+                  </Text>
+                </Box>
+              </Tooltip>
             </Grid>
             <Grid item>
-              <Button size="small" sx={{ minWidth: '30px' }}>
-                <KeyboardArrowDownIcon
-                  sx={{
-                    fontSize: furyActive.typography.h5.fontSize,
-                    color: '#fff',
-                  }}
-                />
-              </Button>
+              <Tooltip title={echo('tooltip-brand')}>
+                <Button size="small" sx={{ minWidth: '30px' }}>
+                  <KeyboardArrowDownIcon
+                    sx={{
+                      fontSize: furyActive.typography.h5.fontSize,
+                      color: '#fff',
+                    }}
+                  />
+                </Button>
+              </Tooltip>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs>
           <Box textAlign="right">
             <Box display="inline-block" pr={1.5}>
-              <IconButton size="small">
-                <SearchIcon
-                  sx={{
-                    fontSize: furyActive.typography.h5.fontSize,
-                    color: '#fff',
-                  }}
-                />
-              </IconButton>
+              <Tooltip title={echo('tooltip-search')}>
+                <IconButton size="small">
+                  <SearchIcon
+                    sx={{
+                      fontSize: furyActive.typography.h5.fontSize,
+                      color: '#fff',
+                    }}
+                  />
+                </IconButton>
+              </Tooltip>
             </Box>
             <Box display="inline-block" pr={1.5}>
-              <IconButton size="small" onClick={toggleDarkMode}>
-                {isDark ? (
-                  <Brightness4Icon
-                    sx={{
-                      fontSize: furyActive.typography.h5.fontSize,
-                      color: '#fff',
-                    }}
-                  />
-                ) : (
-                  <DarkModeIcon
-                    sx={{
-                      fontSize: furyActive.typography.h5.fontSize,
-                      color: '#fff',
-                    }}
-                  />
-                )}
-              </IconButton>
+              <Tooltip title={echo('tooltip-darkmode')}>
+                <IconButton size="small" onClick={toggleDarkMode}>
+                  {isDark ? (
+                    <Brightness4Icon
+                      sx={{
+                        fontSize: furyActive.typography.h5.fontSize,
+                        color: '#fff',
+                      }}
+                    />
+                  ) : (
+                    <DarkModeIcon
+                      sx={{
+                        fontSize: furyActive.typography.h5.fontSize,
+                        color: '#fff',
+                      }}
+                    />
+                  )}
+                </IconButton>
+              </Tooltip>
             </Box>
             <Box display="inline-block">
-              <Button
-                size="small"
-                sx={{
-                  fontSize: furyActive.typography.body1.fontSize,
-                  color: '#fff',
-                }}
-              >
-                {echoActiveId === 'en' && 'English'}
-                {echoActiveId === 'pt' && 'Português'}
-                {echoActiveId === 'de' && 'Deutsch'}
-                {echoActiveId === 'fr' && 'Français'}
-              </Button>
+              <Tooltip title={echo('tooltip-locale')}>
+                <Button
+                  size="small"
+                  sx={{
+                    fontSize: furyActive.typography.body1.fontSize,
+                    color: '#fff',
+                  }}
+                >
+                  {echoActiveId === 'en' && 'English'}
+                  {echoActiveId === 'pt' && 'Português'}
+                  {echoActiveId === 'de' && 'Deutsch'}
+                  {echoActiveId === 'fr' && 'Français'}
+                </Button>
+              </Tooltip>
             </Box>
           </Box>
         </Grid>
