@@ -26,6 +26,42 @@ export const BasicClipboard: Story<TextProps> = (args) => (
   </Text>
 );
 
+export const Capitalize: Story<TextProps> = (args) => (
+  <Text {...args} capitalize>
+    lorem ipsum dolor sit amet
+  </Text>
+);
+
+export const CapitalizeWords: Story<TextProps> = (args) => (
+  <Text {...args} capitalize="allWords">
+    lorem ipsum dolor sit amet
+  </Text>
+);
+
+export const CapitalizeClipboard: Story<TextProps> = (args) => (
+  <Text {...args} capitalize="allWords" clipboard>
+    lorem ipsum dolor sit amet
+  </Text>
+);
+
+export const Truncate: Story<TextProps> = (args) => (
+  <Text {...args} truncate={{ len: 20 }}>
+    Lorem ipsum dolor sit amet
+  </Text>
+);
+
+export const TruncateWords: Story<TextProps> = (args) => (
+  <Text {...args} truncate={{ len: 20, keepLastWord: true }}>
+    Lorem ipsum dolor sit amet
+  </Text>
+);
+
+export const TruncateClipboard: Story<TextProps> = (args) => (
+  <Text {...args} truncate={{ len: 20, keepLastWord: true }} clipboard>
+    Lorem ipsum dolor sit amet
+  </Text>
+);
+
 export const FormatNumber: Story<TextProps> = (args) => (
   <Text {...args} formatNumber>
     1337

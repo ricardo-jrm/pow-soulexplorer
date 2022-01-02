@@ -82,6 +82,17 @@ export interface TextProps
    * Renders link element
    */
   link?: LinkProps;
+  /**
+   * Truncate text options
+   */
+  truncate?: {
+    len: number;
+    keepLastWord?: boolean;
+  };
+  /**
+   * Capitalize text options
+   */
+  capitalize?: boolean | 'allWords';
 }
 
 /**
@@ -97,6 +108,8 @@ export const Text = ({
   clipboard,
   variant = 'body1',
   link,
+  truncate,
+  capitalize,
   ...propsTypo
 }: TextProps) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -113,11 +126,24 @@ export const Text = ({
     }
 
     if (translate) {
+      if (capitalize) {
+        if (capitalize === 'allWords') {
+          return stringCapitalize(echo(children as string), true);
+        }
+        return stringCapitalize(echo(children as string));
+      }
       return echo(children as string);
     }
 
+    if (capitalize) {
+      if (capitalize === 'allWords') {
+        return stringCapitalize(`${children}`, true);
+      }
+      return stringCapitalize(`${children}`);
+    }
+
     return `${children}`;
-  }, [formatDate, formatNumber, children, translate, echo]);
+  }, [formatDate, formatNumber, children, translate, echo, capitalize]);
 
   const result = useMemo(() => {
     if (link) {
@@ -140,12 +166,22 @@ export const Text = ({
       );
     }
 
+    let strDisplay = `${copy}`;
+
+    if (truncate) {
+      if (truncate.keepLastWord) {
+        strDisplay = stringTruncate(copy, truncate.len, true);
+      } else {
+        strDisplay = stringTruncate(copy, truncate.len);
+      }
+    }
+
     return (
       <Typography variant={variant} {...propsTypo}>
-        {copy}
+        {strDisplay}
       </Typography>
     );
-  }, [variant, propsTypo, copy, link]);
+  }, [variant, propsTypo, copy, link, truncate]);
 
   return (
     <Grid container spacing={spacing} alignItems="center">
