@@ -1,4 +1,5 @@
 import React from 'react';
+import { SnackbarProvider } from 'notistack';
 import { EchoProvider } from '@ricardo-jrm/echo';
 import { FuryProvider } from '@ricardo-jrm/fury';
 import { PainProvider } from '@ricardo-jrm/pain';
@@ -17,11 +18,13 @@ interface AppProviderProps {
  * AppProvider
  */
 export const AppProvider = ({ children }: AppProviderProps) => (
-  <EchoProvider echo={locales} echoDefault="en">
-    <PainProvider pain={metas} painDefault="soul">
-      <FuryProvider fury={themes} furyDefault="soul">
-        {children}
-      </FuryProvider>
-    </PainProvider>
-  </EchoProvider>
+  <SnackbarProvider maxSnack={3}>
+    <EchoProvider echo={locales} echoDefault="en">
+      <PainProvider pain={metas} painDefault="soul">
+        <FuryProvider fury={themes} furyDefault="soul">
+          {children}
+        </FuryProvider>
+      </PainProvider>
+    </EchoProvider>
+  </SnackbarProvider>
 );
