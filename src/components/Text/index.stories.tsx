@@ -10,7 +10,7 @@ export default {
   },
 } as Meta;
 
-export const Basic: Story<TextProps> = (args) => (
+export const BasicText: Story<TextProps> = (args) => (
   <Text {...args}>Basic Text</Text>
 );
 
@@ -23,24 +23,6 @@ export const BasicLabel: Story<TextProps> = (args) => (
 export const BasicClipboard: Story<TextProps> = (args) => (
   <Text {...args} clipboard spacing={1}>
     Basic Text
-  </Text>
-);
-
-export const Translated: Story<TextProps> = (args) => (
-  <Text {...args} translate>
-    example
-  </Text>
-);
-
-export const TranslatedLabel: Story<TextProps> = (args) => (
-  <Text {...args} translate label="example" spacing={1}>
-    example
-  </Text>
-);
-
-export const TranslatedClipboard: Story<TextProps> = (args) => (
-  <Text {...args} translate clipboard spacing={1}>
-    example
   </Text>
 );
 
@@ -62,4 +44,45 @@ export const FormatDate: Story<TextProps> = (args) => (
 
 export const FormatDateClipboard: Story<TextProps> = (args) => (
   <Text {...args} formatDate={new Date()} clipboard />
+);
+
+export const Translated: Story<TextProps> = (args) => (
+  <Text {...args} translate>
+    example
+  </Text>
+);
+
+export const TranslatedLabel: Story<TextProps> = (args) => (
+  <Text {...args} translate label="example" spacing={1}>
+    example
+  </Text>
+);
+
+export const TranslatedClipboard: Story<TextProps> = (args) => (
+  <Text {...args} translate clipboard spacing={1}>
+    example
+  </Text>
+);
+
+export const Link: Story<TextProps> = (args) => (
+  <Text
+    {...args}
+    link={{
+      href: '/?path=/story/lab-example--story-component',
+    }}
+  >
+    Link (Doesn&apos;t work inside Storybook unless ctrl+click)
+  </Text>
+);
+
+export const LinkExternal: Story<TextProps> = (args) => (
+  <Text
+    {...args}
+    link={{
+      href: 'https://github.com/ricardo-jrm/pow-soulexplorer',
+      external: true,
+    }}
+  >
+    External link
+  </Text>
 );

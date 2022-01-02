@@ -21,6 +21,14 @@ import {
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 /**
+ * Link props
+ */
+export interface LinkProps {
+  href: string;
+  external?: boolean;
+}
+
+/**
  * Text props
  */
 export interface TextProps
@@ -70,6 +78,10 @@ export interface TextProps
    * Adds clipboard element
    */
   clipboard?: boolean;
+  /**
+   * Renders link element
+   */
+  link?: LinkProps;
 }
 
 /**
@@ -84,43 +96,12 @@ export const Text = ({
   label,
   clipboard,
   variant = 'body1',
+  link,
   ...propsTypo
 }: TextProps) => {
   const { enqueueSnackbar } = useSnackbar();
   const { furyActive } = useFury();
   const { echo } = useEcho();
-
-  const result = useMemo(() => {
-    if (formatDate) {
-      return (
-        <Typography variant={variant} {...propsTypo}>
-          {dateFormat(formatDate)}
-        </Typography>
-      );
-    }
-
-    if (formatNumber) {
-      return (
-        <Typography variant={variant} {...propsTypo}>
-          {numberFormat(children as number)}
-        </Typography>
-      );
-    }
-
-    if (translate) {
-      return (
-        <Typography variant={variant} {...propsTypo}>
-          {echo(children as string)}
-        </Typography>
-      );
-    }
-
-    return (
-      <Typography variant={variant} {...propsTypo}>
-        {children}
-      </Typography>
-    );
-  }, [translate, children, echo, formatNumber, formatDate, variant, propsTypo]);
 
   const copy: string = useMemo(() => {
     if (formatDate) {
@@ -137,6 +118,34 @@ export const Text = ({
 
     return `${children}`;
   }, [formatDate, formatNumber, children, translate, echo]);
+
+  const result = useMemo(() => {
+    if (link) {
+      const { href, external } = link;
+      const linkProps = external
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {};
+      const linkComponent = (
+        <MuiLink variant={variant} href={href} {...linkProps}>
+          {copy}
+        </MuiLink>
+      );
+      if (external) {
+        return linkComponent;
+      }
+      return (
+        <NextLink href={href} passHref>
+          {linkComponent}
+        </NextLink>
+      );
+    }
+
+    return (
+      <Typography variant={variant} {...propsTypo}>
+        {copy}
+      </Typography>
+    );
+  }, [variant, propsTypo, copy, link]);
 
   return (
     <Grid container spacing={spacing} alignItems="center">

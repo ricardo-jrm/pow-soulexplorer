@@ -54,7 +54,7 @@
     "indent": "off",
     "semi": "off",
     "implicit-arrow-linebreak": "off",
-    "arrow-body-style": "warn",
+    "arrow-body-style": 0,
     "no-multiple-empty-lines": "off",
     "no-trailing-spaces": "off",
     "object-curly-spacing": "off",
