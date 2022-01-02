@@ -88,6 +88,7 @@
     "react/jsx-indent-props": "warn",
     "react/jsx-curly-brace-presence": 0,
     "react/require-default-props": 0,
-    "react/jsx-wrap-multilines": 0
+    "react/jsx-wrap-multilines": 0,
+    "max-len": 0
   }
 }
