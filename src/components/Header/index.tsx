@@ -89,14 +89,15 @@ export const Header = ({ height }: HeaderProps) => {
             <Grid item>
               <Box pt={0.5}>
                 <Tooltip title={echo('tooltip-nav-homepage')}>
-                  <Box>
+                  <Box
+                    onClick={() => push('/')}
+                    style={{
+                      cursor: 'pointer',
+                    }}
+                  >
                     <Image
                       src={painActive.logo as string}
                       height={painActiveId === 'soul' ? '24px' : '27px'}
-                      onClick={() => push('/')}
-                      style={{
-                        cursor: 'pointer',
-                      }}
                     />
                   </Box>
                 </Tooltip>
