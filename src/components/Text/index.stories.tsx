@@ -104,7 +104,7 @@ export const Link: Story<TextProps> = (args) => (
   <Text
     {...args}
     link={{
-      href: '/?path=/story/lab-example--story-component',
+      href: '/?path=/story/components-text--basic-text',
     }}
   >
     Link (Doesn&apos;t work inside Storybook unless ctrl+click)
