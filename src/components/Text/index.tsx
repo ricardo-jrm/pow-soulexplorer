@@ -110,6 +110,7 @@ export const Text = ({
   link,
   truncate,
   capitalize,
+  sx,
   ...propsTypo
 }: TextProps) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -149,7 +150,7 @@ export const Text = ({
         ? { target: '_blank', rel: 'noopener noreferrer' }
         : {};
       const linkComponent = (
-        <MuiLink variant={variant} href={href} {...linkProps}>
+        <MuiLink variant={variant} href={href} {...linkProps} sx={sx}>
           {copy}
         </MuiLink>
       );
@@ -170,17 +171,22 @@ export const Text = ({
     }
 
     return (
-      <Typography variant={variant} {...propsTypo}>
+      <Typography variant={variant} {...propsTypo} sx={sx}>
         {strDisplay}
       </Typography>
     );
-  }, [variant, propsTypo, copy, link, truncate]);
+  }, [variant, propsTypo, copy, link, truncate, sx]);
 
   return (
-    <Grid container spacing={spacing} alignItems="center">
+    <Grid
+      container
+      spacing={spacing}
+      alignItems="center"
+      sx={{ width: '100%' }}
+    >
       {label && (
         <Grid item>
-          <Typography variant={variant} {...propsTypo}>
+          <Typography variant={variant} {...propsTypo} sx={sx}>
             <b>{translate ? echo(label) : label}:</b>
           </Typography>
         </Grid>
@@ -188,7 +194,7 @@ export const Text = ({
       <Grid item>{result}</Grid>
       {clipboard && (
         <Grid item>
-          <Typography variant={variant} {...propsTypo}>
+          <Typography variant={variant} {...propsTypo} sx={sx}>
             <CopyToClipboard text={copy}>
               <IconButton
                 size="small"
