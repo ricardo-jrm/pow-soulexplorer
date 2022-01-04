@@ -83,7 +83,11 @@ export const ViewHome = () => {
                       truncate={{
                         len: 36,
                       }}
-                      sx={{ textDecoration: 'none', fontWeight: 600 }}
+                      sx={{
+                        textDecoration: 'none',
+                        color: furyActive.palette.secondary.main,
+                        fontWeight: 600,
+                      }}
                     >
                       ● Phantasma X Raze Network
                     </Text>
@@ -97,7 +101,11 @@ export const ViewHome = () => {
                       truncate={{
                         len: 36,
                       }}
-                      sx={{ textDecoration: 'none', fontWeight: 600 }}
+                      sx={{
+                        textDecoration: 'none',
+                        color: furyActive.palette.secondary.main,
+                        fontWeight: 600,
+                      }}
                     >
                       ● Poltergeist 2.0
                     </Text>
@@ -111,7 +119,11 @@ export const ViewHome = () => {
                       truncate={{
                         len: 36,
                       }}
-                      sx={{ textDecoration: 'none', fontWeight: 600 }}
+                      sx={{
+                        textDecoration: 'none',
+                        color: furyActive.palette.secondary.main,
+                        fontWeight: 600,
+                      }}
                     >
                       ● Steam Integration through Pavillion on Phantasma Chain!
                     </Text>
@@ -125,7 +137,11 @@ export const ViewHome = () => {
                       truncate={{
                         len: 36,
                       }}
-                      sx={{ textDecoration: 'none', fontWeight: 600 }}
+                      sx={{
+                        textDecoration: 'none',
+                        color: furyActive.palette.secondary.main,
+                        fontWeight: 600,
+                      }}
                     >
                       ● Phantasma Chain X Aleph.im
                     </Text>
@@ -139,7 +155,11 @@ export const ViewHome = () => {
                       truncate={{
                         len: 36,
                       }}
-                      sx={{ textDecoration: 'none', fontWeight: 600 }}
+                      sx={{
+                        textDecoration: 'none',
+                        color: furyActive.palette.secondary.main,
+                        fontWeight: 600,
+                      }}
                     >
                       ● World premiere: First ever cross-chain NFT marketplace!
                     </Text>
@@ -153,7 +173,11 @@ export const ViewHome = () => {
                       truncate={{
                         len: 36,
                       }}
-                      sx={{ textDecoration: 'none', fontWeight: 600 }}
+                      sx={{
+                        textDecoration: 'none',
+                        fontWeight: 600,
+                        color: furyActive.palette.secondary.main,
+                      }}
                     >
                       ● Main Net Launch!
                     </Text>
@@ -165,7 +189,7 @@ export const ViewHome = () => {
                 rel="noopener noreferrer"
                 href="https://medium.com/phantasticphantasma"
               >
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="secondary">
                   {echo('btn-blog')}
                 </Button>
               </MuiLink>
@@ -177,7 +201,7 @@ export const ViewHome = () => {
             <Box p={3} textAlign="center">
               <NextLink href="/nexus" passHref>
                 <MuiLink href="/nexus">
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained" color="secondary">
                     {echo('btn-nexus')}
                   </Button>
                 </MuiLink>
@@ -190,7 +214,7 @@ export const ViewHome = () => {
             <Box p={3} textAlign="center">
               <Tooltip title={echo('wip')}>
                 <Box display="inline-block">
-                  <Button variant="contained" color="primary" disabled>
+                  <Button variant="contained" color="secondary" disabled>
                     {echo('btn-metrics')}
                   </Button>
                 </Box>

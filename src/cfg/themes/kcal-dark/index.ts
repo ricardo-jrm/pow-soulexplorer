@@ -11,6 +11,9 @@ export const kcalDark: ThemeOptions = {
       main: 'rgb(145, 25, 25)',
       dark: 'rgb(101, 17, 17)',
     },
+    secondary: {
+      main: '#d02525',
+    },
   },
   components: overrides,
 };

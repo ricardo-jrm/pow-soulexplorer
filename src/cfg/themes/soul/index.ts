@@ -10,6 +10,9 @@ export const soul: ThemeOptions = {
       main: '#037abd',
       dark: 'rgb(2, 85, 132)',
     },
+    secondary: {
+      main: '#037abd',
+    },
   },
   components: overrides,
 };

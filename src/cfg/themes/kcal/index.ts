@@ -10,6 +10,9 @@ export const kcal: ThemeOptions = {
       main: '#d02525',
       dark: 'rgb(145, 25, 25)',
     },
+    secondary: {
+      main: '#d02525',
+    },
   },
   components: overrides,
 };
