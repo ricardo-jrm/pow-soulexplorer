@@ -1,7 +1,6 @@
 import React, { ReactNode, useState, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import Konami from 'react-konami-code';
-import { useFury } from '@ricardo-jrm/fury';
 import { Box, Dialog } from '@ricardo-jrm/fury/dist/mui';
 import { LayoutHome } from '../LayoutHome';
 import { LayoutPage } from '../LayoutPage';
@@ -17,9 +16,6 @@ interface AppLayoutProps {
 
 export const AppLayout = ({ children }: AppLayoutProps) => {
   const { pathname } = useRouter();
-
-  const { furyActive } = useFury();
-  const { palette } = furyActive;
 
   const [open, openSet] = useState(false);
   const handleOpen = useCallback(() => openSet(true), [openSet]);
