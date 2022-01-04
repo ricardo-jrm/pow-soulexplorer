@@ -8,4 +8,8 @@ export const en: EchoMsgs = {
   'tooltip-search': 'Open search',
   'tooltip-brand': 'Switch brand',
   'tooltip-nav-homepage': 'Go to Home',
+  'btn-blog': 'Visit the blog',
+  'btn-nexus': 'Enter the Nexus',
+  'btn-metrics': 'Explore on-chain metrics',
+  'news-title': 'Latest news',
 };
