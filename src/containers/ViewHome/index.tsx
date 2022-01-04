@@ -12,6 +12,7 @@ import {
 } from '@ricardo-jrm/fury/dist/mui';
 import { Text } from '../../components/Text';
 import { Image } from '../../components/Image';
+import { HomeChart } from '../../components/HomeChart';
 import { HEADER_HEIGHT, FOOTER_HEIGHT } from '../../cfg/layout';
 
 /**
@@ -220,22 +221,33 @@ export const ViewHome = () => {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper>
-            <Box pt={0.9} pb={1.5} px={1.2} sx={{ minHeight: '330px' }}>
-              <Box pb={1}>
-                <Text variant="h6">{echo('metrics-title')}</Text>
+          <Box display={{ xs: 'none', lg: 'block' }}>
+            <Paper>
+              <Box pt={0.9} pb={1.5} px={1.2} sx={{ minHeight: '330px' }}>
+                <Box pb={1}>
+                  <Text variant="h6">{echo('metrics-title')}</Text>
+                </Box>
+                <Box>
+                  <Grid container>
+                    <Grid item xs={12} md={12}>
+                      <Box py={1}>
+                        <HomeChart height={234} />
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </Box>
+                <Box textAlign="center">
+                  <Tooltip title={echo('wip')}>
+                    <Box display="inline-block">
+                      <Button variant="contained" color="secondary" disabled>
+                        {echo('btn-metrics')}
+                      </Button>
+                    </Box>
+                  </Tooltip>
+                </Box>
               </Box>
-              <Box textAlign="center">
-                <Tooltip title={echo('wip')}>
-                  <Box display="inline-block">
-                    <Button variant="contained" color="secondary" disabled>
-                      {echo('btn-metrics')}
-                    </Button>
-                  </Box>
-                </Tooltip>
-              </Box>
-            </Box>
-          </Paper>
+            </Paper>
+          </Box>
         </Grid>
       </Grid>
     </Grid>
