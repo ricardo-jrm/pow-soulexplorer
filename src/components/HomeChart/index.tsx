@@ -144,7 +144,6 @@ export const HomeChart = ({ height }: HomeChartProps) => {
           tickRotation: 45,
         }}
         axisLeft={{
-          // tickValues: [0.01, 0.1, 1, 10],
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
