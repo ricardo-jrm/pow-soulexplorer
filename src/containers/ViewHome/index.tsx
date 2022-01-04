@@ -67,14 +67,14 @@ export const ViewHome = () => {
           </Grid>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <Paper sx={{ minHeight: '201px' }}>
-            <Box textAlign="center" pt={0.9} pb={1.5} px={1.2}>
+          <Paper>
+            <Box pt={0.9} pb={1.5} px={1.2} sx={{ minHeight: '201px' }}>
               <Box pb={1}>
                 <Text variant="h6">{echo('news-title')}</Text>
               </Box>
-              <Box px={1} pb={3}>
-                <Grid container spacing={0.5}>
-                  <Grid item xs={12} md={6}>
+              <Box px={1} pb={3} sx={{ minHeight: '108px' }}>
+                <Grid container>
+                  <Grid item xs={12} md={6} pb={0.5}>
                     <Text
                       link={{
                         external: true,
@@ -92,7 +92,7 @@ export const ViewHome = () => {
                       ● Phantasma X Raze Network
                     </Text>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6} pb={0.5}>
                     <Text
                       link={{
                         external: true,
@@ -110,7 +110,7 @@ export const ViewHome = () => {
                       ● Poltergeist 2.0
                     </Text>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6} pb={0.5}>
                     <Text
                       link={{
                         external: true,
@@ -128,7 +128,7 @@ export const ViewHome = () => {
                       ● Steam Integration through Pavillion on Phantasma Chain!
                     </Text>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6} pb={0.5}>
                     <Text
                       link={{
                         external: true,
@@ -146,7 +146,7 @@ export const ViewHome = () => {
                       ● Phantasma Chain X Aleph.im
                     </Text>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6} pb={0.5}>
                     <Text
                       link={{
                         external: true,
@@ -164,7 +164,7 @@ export const ViewHome = () => {
                       ● World premiere: First ever cross-chain NFT marketplace!
                     </Text>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6} pb={0.5}>
                     <Text
                       link={{
                         external: true,
@@ -184,41 +184,56 @@ export const ViewHome = () => {
                   </Grid>
                 </Grid>
               </Box>
-              <MuiLink
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://medium.com/phantasticphantasma"
-              >
-                <Button variant="contained" color="secondary">
-                  {echo('btn-blog')}
-                </Button>
-              </MuiLink>
+              <Box textAlign="center">
+                <MuiLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://medium.com/phantasticphantasma"
+                >
+                  <Button variant="contained" color="secondary">
+                    {echo('btn-blog')}
+                  </Button>
+                </MuiLink>
+              </Box>
             </Box>
           </Paper>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <Paper sx={{ minHeight: '201px' }}>
-            <Box p={3} textAlign="center">
-              <NextLink href="/nexus" passHref>
-                <MuiLink href="/nexus">
-                  <Button variant="contained" color="secondary">
-                    {echo('btn-nexus')}
-                  </Button>
-                </MuiLink>
-              </NextLink>
+          <Paper>
+            <Box pt={0.9} pb={1.5} px={1.2} sx={{ minHeight: '201px' }}>
+              <Box pb={1}>
+                <Text variant="h6">{echo('nexus-title')}</Text>
+              </Box>
+              <Box px={1} pb={3} sx={{ minHeight: '108px' }}>
+                ASD
+              </Box>
+              <Box textAlign="center">
+                <NextLink href="/nexus" passHref>
+                  <MuiLink href="/nexus">
+                    <Button variant="contained" color="secondary">
+                      {echo('btn-nexus')}
+                    </Button>
+                  </MuiLink>
+                </NextLink>
+              </Box>
             </Box>
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper sx={{ minHeight: '330px' }}>
-            <Box p={3} textAlign="center">
-              <Tooltip title={echo('wip')}>
-                <Box display="inline-block">
-                  <Button variant="contained" color="secondary" disabled>
-                    {echo('btn-metrics')}
-                  </Button>
-                </Box>
-              </Tooltip>
+          <Paper>
+            <Box pt={0.9} pb={1.5} px={1.2} sx={{ minHeight: '330px' }}>
+              <Box pb={1}>
+                <Text variant="h6">{echo('metrics-title')}</Text>
+              </Box>
+              <Box textAlign="center">
+                <Tooltip title={echo('wip')}>
+                  <Box display="inline-block">
+                    <Button variant="contained" color="secondary" disabled>
+                      {echo('btn-metrics')}
+                    </Button>
+                  </Box>
+                </Tooltip>
+              </Box>
             </Box>
           </Paper>
         </Grid>

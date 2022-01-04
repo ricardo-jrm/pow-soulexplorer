@@ -12,4 +12,6 @@ export const en: EchoMsgs = {
   'btn-nexus': 'Enter the Nexus',
   'btn-metrics': 'Explore on-chain metrics',
   'news-title': 'Latest news',
+  'nexus-title': 'Explore the blockchain',
+  'metrics-title': 'Metrics & analytics',
 };
