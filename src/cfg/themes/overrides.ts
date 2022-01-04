@@ -9,4 +9,14 @@ export const overrides: ThemeOptions['components'] = {
       },
     },
   },
+  MuiDialog: {
+    styleOverrides: {
+      paper: {
+        backgroundColor: 'transparent',
+        boxShadow: '0px 0px 0px',
+        border: 0,
+        backgroundImage: 'none',
+      },
+    },
+  },
 };

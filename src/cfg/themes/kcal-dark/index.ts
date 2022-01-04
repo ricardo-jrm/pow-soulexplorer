@@ -8,8 +8,8 @@ export const kcalDark: ThemeOptions = {
     mode: 'dark',
     primary: {
       light: '#d02525',
-      main: 'rgb(145, 25, 25)',
-      dark: 'rgb(101, 17, 17)',
+      main: '#911818',
+      dark: '#661111',
     },
     secondary: {
       main: '#d02525',

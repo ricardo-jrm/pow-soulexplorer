@@ -6,9 +6,9 @@ export const kcal: ThemeOptions = {
   typography,
   palette: {
     primary: {
-      light: 'rgb(217, 80, 80)',
+      light: '#d85050',
       main: '#d02525',
-      dark: 'rgb(145, 25, 25)',
+      dark: '#911818',
     },
     secondary: {
       main: '#d02525',

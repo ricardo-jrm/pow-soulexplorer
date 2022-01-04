@@ -8,8 +8,8 @@ export const soulDark: ThemeOptions = {
     mode: 'dark',
     primary: {
       light: '#037abd',
-      main: 'rgb(2, 85, 132)',
-      dark: 'rgb(1, 59, 92)',
+      main: '#025484',
+      dark: '#003a5b',
     },
     secondary: {
       main: '#037abd',
