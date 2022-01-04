@@ -21,6 +21,7 @@ export const LayoutHome = ({ children }: LayoutHomeProps) => {
     >
       <Header height={HEADER_HEIGHT} />
       <Container>{children}</Container>
+      <div style={{ width: '100%', height: `${FOOTER_HEIGHT}px` }} />
       <Footer height={FOOTER_HEIGHT} />
     </Box>
   );

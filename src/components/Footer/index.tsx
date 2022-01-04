@@ -91,7 +91,7 @@ export const Footer = ({ height }: FooterProps) => {
                 alignContent="center"
                 justifyItems="center"
                 justifyContent="center"
-                spacing={2}
+                spacing={{ xs: 0.75, md: 2 }}
               >
                 <Grid item>
                   <Link

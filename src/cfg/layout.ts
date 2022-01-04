@@ -1,3 +1,3 @@
-export const HEADER_HEIGHT = 81;
+export const HEADER_HEIGHT = 72;
 
-export const FOOTER_HEIGHT = 180;
+export const FOOTER_HEIGHT = 171;

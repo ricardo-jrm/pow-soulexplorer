@@ -144,6 +144,12 @@ export const Text = ({
   }, [formatDate, formatNumber, children, translate, echo, capitalize]);
 
   const result = useMemo(() => {
+    let strDisplay = `${copy}`;
+
+    if (truncate) {
+      strDisplay = stringTruncate(copy, truncate.len, truncate.keepLastWord);
+    }
+
     if (link) {
       const { href, external } = link;
       const linkProps = external
@@ -151,7 +157,7 @@ export const Text = ({
         : {};
       const linkComponent = (
         <MuiLink variant={variant} href={href} {...linkProps} sx={sx}>
-          {copy}
+          {strDisplay}
         </MuiLink>
       );
       if (external) {
@@ -162,12 +168,6 @@ export const Text = ({
           {linkComponent}
         </NextLink>
       );
-    }
-
-    let strDisplay = `${copy}`;
-
-    if (truncate) {
-      strDisplay = stringTruncate(copy, truncate.len, truncate.keepLastWord);
     }
 
     return (

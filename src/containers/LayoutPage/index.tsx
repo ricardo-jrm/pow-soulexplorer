@@ -30,7 +30,7 @@ export const LayoutPage = ({ children }: LayoutPageProps) => {
       >
         <div
           style={{
-            height: '210px',
+            height: '150px',
             width: '100%',
             backgroundColor: furyActive.palette.primary.main,
           }}
@@ -63,6 +63,7 @@ export const LayoutPage = ({ children }: LayoutPageProps) => {
       </div>
       <Header height={HEADER_HEIGHT} />
       <Container>{children}</Container>
+      <div style={{ width: '100%', height: `${FOOTER_HEIGHT}px` }} />
       <Footer height={FOOTER_HEIGHT} />
     </Box>
   );
