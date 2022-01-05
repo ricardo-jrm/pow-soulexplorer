@@ -132,10 +132,12 @@ export const HomeChart = ({ height }: HomeChartProps) => {
         useMesh
         colors={[palette.secondary.main]}
         enableArea
+        curve="natural"
         lineWidth={4}
-        pointSize={8}
-        pointColor={isDark ? '#121212' : '#fff'}
-        pointBorderWidth={3}
+        pointSize={4}
+        // pointSize={8}
+        // pointColor={isDark ? '#121212' : '#fff'}
+        // pointBorderWidth={3}
         pointBorderColor={{ from: 'serieColor', modifiers: [] }}
         margin={{ top: 9, right: 150, bottom: 30, left: 150 }}
         axisBottom={{
