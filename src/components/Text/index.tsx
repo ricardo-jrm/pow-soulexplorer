@@ -16,10 +16,12 @@ import { useFury } from '@ricardo-jrm/fury';
 import {
   numberFormat,
   dateFormat,
+  dateRelative,
   stringCapitalize,
   stringTruncate,
 } from '@ricardo-jrm/dervish';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import EventIcon from '@mui/icons-material/Event';
 
 /**
  * Link props
@@ -226,6 +228,29 @@ export const Text = ({
         </Grid>
       )}
       <Grid item>{result}</Grid>
+      {formatDate && (
+        <Grid item>
+          <Tooltip title={dateRelative(formatDate).fromNow}>
+            <Typography variant={variant} {...propsTypo} sx={sx}>
+              <CopyToClipboard text={dateRelative(formatDate).fromNow}>
+                <IconButton
+                  size="small"
+                  onClick={(e) => {
+                    enqueueSnackbar(dateRelative(formatDate).fromNow);
+                    e.stopPropagation();
+                  }}
+                >
+                  <EventIcon
+                    style={{
+                      fontSize: furyActive.typography[variant].fontSize,
+                    }}
+                  />
+                </IconButton>
+              </CopyToClipboard>
+            </Typography>
+          </Tooltip>
+        </Grid>
+      )}
       {clipboard && (
         <Grid item>
           <Tooltip title={echo('copy-to-clipboard')}>
