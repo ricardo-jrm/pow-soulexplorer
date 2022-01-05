@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
 import { useRouter } from 'next/router';
-import { Box, Paper } from '@ricardo-jrm/fury/dist/mui';
+import { Box } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
 import { ChainOverview } from '../../components/ChainOverview';
+import { NotFound } from '../../components/404';
 import { chains, Chain } from '../../mocks/chains';
 
 const BlocksComponent = () => <>Blocks</>;
@@ -64,13 +65,7 @@ export const ViewChain = () => {
         </Box>
       ) : (
         <Box py={3}>
-          <Paper>
-            <Box px={{ xs: 1, md: 3 }} py={6}>
-              <Text label="404" spacing={1} variant="h4">
-                {`${echo('chain')} ${echo('not-found')}`}
-              </Text>
-            </Box>
-          </Paper>
+          <NotFound kind="chain" />
         </Box>
       )}
     </Box>
