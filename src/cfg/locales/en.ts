@@ -14,4 +14,12 @@ export const en: EchoMsgs = {
   'news-title': 'Latest news',
   'nexus-title': 'Explore the blockchain',
   'metrics-title': 'Metrics & analytics',
+  'network-title': 'Welcome to the Nexus',
+  'account-title': 'Explore account',
+  'block-title': 'Explore block',
+  'chain-title': 'Explore chain',
+  'contract-title': 'Explore contract',
+  'dao-title': 'Explore DAO',
+  'token-title': 'Explore token',
+  'tx-title': 'Explore transaction',
 };

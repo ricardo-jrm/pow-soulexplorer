@@ -4,14 +4,14 @@ import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
 
 /**
- * ViewNexus
+ * ViewDao
  */
-export const ViewNexus = () => {
+export const ViewDao = () => {
   const { echo } = useEcho();
   return (
     <Box>
       <Text variant="h3" sx={{ color: '#fff' }}>
-        {echo('network-title')}
+        {echo('dao-title')}
       </Text>
       <Box py={3}>
         <Paper>

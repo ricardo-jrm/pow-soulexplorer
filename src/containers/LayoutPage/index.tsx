@@ -3,6 +3,7 @@ import { useFury } from '@ricardo-jrm/fury';
 import { Box, Container } from '@ricardo-jrm/fury/dist/mui';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
+import { TempNav } from '../../components/TempNav';
 import { HEADER_HEIGHT, FOOTER_HEIGHT } from '../../cfg/layout';
 
 interface LayoutPageProps {
@@ -30,7 +31,7 @@ export const LayoutPage = ({ children }: LayoutPageProps) => {
       >
         <div
           style={{
-            height: '150px',
+            height: '210px',
             width: '100%',
             backgroundColor: furyActive.palette.primary.main,
           }}
@@ -62,7 +63,10 @@ export const LayoutPage = ({ children }: LayoutPageProps) => {
         </div>
       </div>
       <Header height={HEADER_HEIGHT} />
-      <Container>{children}</Container>
+      <Container>
+        <Box pt={3}>{children}</Box>
+        <TempNav />
+      </Container>
       <div style={{ width: '100%', height: `${FOOTER_HEIGHT}px` }} />
       <Footer height={FOOTER_HEIGHT} />
     </Box>
