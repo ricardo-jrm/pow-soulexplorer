@@ -47,6 +47,12 @@ export const typography: ThemeOptions['typography'] = {
   h4: {
     fontFamily: '"Open Sans"',
     fontWeight: 600,
+    fontSize: '30px',
+    lineHeight: '30px',
+    [breakpoints.down('sm')]: {
+      fontSize: '21px',
+      lineHeight: '21px',
+    },
   },
   h5: {
     fontFamily: '"Open Sans"',
