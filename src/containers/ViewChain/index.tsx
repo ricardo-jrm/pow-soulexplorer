@@ -1,22 +1,27 @@
 import React, { useMemo } from 'react';
-import { Box } from '@ricardo-jrm/fury/dist/mui';
+import { useRouter } from 'next/router';
+import { Box, Paper } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
-
-const OverviewComponent = () => <>Overview</>;
+import { ChainOverview } from '../../components/ChainOverview';
+import { chains, Chain } from '../../mocks/chains';
 
 const BlocksComponent = () => <>Blocks</>;
 
 const ContractsComponent = () => <>Contracts</>;
 
-const SidechainsComponent = () => <>Sidechains</>;
-
 /**
  * ViewChain
  */
 export const ViewChain = () => {
+  const { query } = useRouter();
   const { echo } = useEcho();
+
+  const chain = useMemo<Chain>(
+    () => chains[(query.id as string) || 'main'],
+    [query],
+  );
 
   const tabs: NavTabRecord = useMemo(
     () => ({
@@ -24,7 +29,7 @@ export const ViewChain = () => {
         id: 'overview',
         label: echo('tab-overview'),
         href: '/chain',
-        component: <OverviewComponent />,
+        component: <ChainOverview chain={chain} />,
       },
       blocks: {
         id: 'blocks',
@@ -38,14 +43,14 @@ export const ViewChain = () => {
         href: '/chain',
         component: <ContractsComponent />,
       },
-      sidechains: {
-        id: 'sidechains',
-        label: echo('tab-sidechains'),
-        href: '/chain',
-        component: <SidechainsComponent />,
-      },
+      // sidechains: {
+      //   id: 'sidechains',
+      //   label: echo('tab-sidechains'),
+      //   href: '/chain',
+      //   component: <SidechainsComponent />,
+      // },
     }),
-    [echo],
+    [echo, chain],
   );
 
   return (
@@ -53,9 +58,21 @@ export const ViewChain = () => {
       <Text variant="h3" sx={{ color: '#fff' }}>
         {echo('chain-title')}
       </Text>
-      <Box py={3}>
-        <NavTabs tabs={tabs} tabsDefault="overview" />
-      </Box>
+      {chain ? (
+        <Box py={3}>
+          <NavTabs tabs={tabs} tabsDefault="overview" />
+        </Box>
+      ) : (
+        <Box py={3}>
+          <Paper>
+            <Box px={{ xs: 1, md: 3 }} py={6}>
+              <Text label="404" spacing={1} variant="h4">
+                {`${echo('chain')} ${echo('not-found')}`}
+              </Text>
+            </Box>
+          </Paper>
+        </Box>
+      )}
     </Box>
   );
 };
