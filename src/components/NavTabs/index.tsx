@@ -18,19 +18,23 @@ export type NavTabRecord = {
  */
 export interface NavTabsProps {
   tabs: NavTabRecord;
+  tabsDefault: string;
 }
 
 /**
  * NavTabs
  */
-export const NavTabs = ({ tabs }: NavTabsProps) => {
+export const NavTabs = ({ tabs, tabsDefault }: NavTabsProps) => {
   const { query, push } = useRouter();
-  const activeTab = useMemo(() => query.tab || 'tab1', [query]);
+  const activeTab = useMemo(
+    () => query.tab || tabsDefault,
+    [query, tabsDefault],
+  );
 
   const changeTab = useCallback(
-    (tab: string) => {
+    (tab: string, url: string) => {
       push({
-        pathname: '/nexus',
+        pathname: url,
         query: {
           ...query,
           tab,
@@ -48,21 +52,19 @@ export const NavTabs = ({ tabs }: NavTabsProps) => {
           textColor="secondary"
           indicatorColor="secondary"
         >
-          {Object.values(tabs).map(({ label, id }: NavTab) => (
+          {Object.values(tabs).map(({ label, id, href }: NavTab) => (
             <Tab
               label={label}
               key={`tab-${id}`}
               value={id}
-              onClick={() => changeTab(id)}
+              onClick={() => changeTab(id, href)}
             />
           ))}
         </Tabs>
       </Box>
       <Box pt={1.5} pb={3} px={3}>
         {Object.values(tabs).map(({ id, component }: NavTab) => (
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          <Box key={`panel-${id}`}>{activeTab === id && component()}</Box>
+          <Box key={`panel-${id}`}>{activeTab === id && component}</Box>
         ))}
       </Box>
     </Paper>
