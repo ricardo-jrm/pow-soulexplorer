@@ -4,9 +4,9 @@ import { Box } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
-import { ChainOverview } from '../../components/ChainOverview';
 import { NotFound } from '../../components/404';
 import { chains, Chain } from '../../mocks/chains';
+import { ChainOverview } from '../../components/ChainOverview';
 
 const BlocksComponent = () => <>Blocks</>;
 
