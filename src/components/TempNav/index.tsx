@@ -25,7 +25,7 @@ export const TempNav = () => {
     <div>
       <Text
         link={{
-          href: '/account?address=genesis',
+          href: '/account?address=S3d7TbZxtNPdXy11hfmBLJLYn67gZTG2ibL7fJBcVdihWU4',
         }}
       >
         Account
@@ -46,7 +46,7 @@ export const TempNav = () => {
       </Text>
       <Text
         link={{
-          href: '/contract',
+          href: '/contract?name=account',
         }}
       >
         Contract

@@ -51,6 +51,9 @@ export const en: EchoMsgs = {
   'label-validator': 'Validator',
   'label-fees': 'Fees',
   'label-contract': 'Contract',
+  'label-script': 'Script',
+  'label-viewongithub': 'View on Github',
+  'label-abi': 'ABI',
   //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',
