@@ -48,7 +48,7 @@ export const ChainOverview = ({ chain }: ChainOverviewProps) => {
         paragraph
         clipboard
         link={{
-          href: `/block?id=${chain.lastblock}`,
+          href: `/block?hash=${chain.lastblock}`,
         }}
         linkStyles={{
           color: palette.secondary.main,

@@ -34,7 +34,7 @@ export const AccountOverview = ({ account }: AccountOverviewProps) => {
         paragraph
         clipboard
         link={{
-          href: `/chain?id=${account.name}`,
+          href: `/contract?name=${account.name}`,
         }}
         linkStyles={{
           color: palette.secondary.main,
