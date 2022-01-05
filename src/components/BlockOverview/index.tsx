@@ -26,26 +26,72 @@ export const BlockOverview = ({ block }: BlockOverviewProps) => {
         label={echo('label-date')}
         spacing={1}
         paragraph
-        clipboard
         formatDate={block.date}
       />
-      {/* <Text label={echo('label-type')} spacing={1} paragraph clipboard>
-        {block.type}
-      </Text>
       <Text
-        label={echo('label-name')}
+        label={echo('label-chain')}
         spacing={1}
         paragraph
         clipboard
         link={{
-          href: `/contract?name=${block.name}`,
+          href: `/chain?id=${block.chain}&tab=blocks`,
         }}
         linkStyles={{
           color: palette.secondary.main,
         }}
       >
-        {block.name}
-      </Text> */}
+        {block.chain}
+      </Text>
+      {block.prevHash && (
+        <Text
+          label={echo('label-prevhash')}
+          spacing={1}
+          paragraph
+          clipboard
+          link={{
+            href: `/block?hash=${block.prevHash}`,
+          }}
+          linkStyles={{
+            color: palette.secondary.main,
+          }}
+        >
+          {block.prevHash}
+        </Text>
+      )}
+      <Text label={echo('label-blockheight')} spacing={1} paragraph clipboard>
+        {`#${block.blockHeight}`}
+      </Text>
+      <Text label={echo('label-tx')} spacing={1} paragraph formatNumber>
+        {block.transactions}
+      </Text>
+      <Text
+        label={echo('label-validator')}
+        spacing={1}
+        paragraph
+        clipboard
+        link={{
+          href: `/account?address=${block.validator}`,
+        }}
+        linkStyles={{
+          color: palette.secondary.main,
+        }}
+      >
+        {block.validator}
+      </Text>
+      <Text
+        label={echo('label-fees')}
+        spacing={1}
+        paragraph
+        clipboard
+        link={{
+          href: `/account?address=${block.fees}`,
+        }}
+        linkStyles={{
+          color: palette.secondary.main,
+        }}
+      >
+        {block.fees}
+      </Text>
     </Box>
   );
 };

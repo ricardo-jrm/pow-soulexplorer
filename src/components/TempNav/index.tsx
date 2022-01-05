@@ -25,21 +25,21 @@ export const TempNav = () => {
     <div>
       <Text
         link={{
-          href: '/account',
+          href: '/account?address=genesis',
         }}
       >
         Account
       </Text>
       <Text
         link={{
-          href: '/block',
+          href: '/block?hash=9AD4C0C9602FBA780496D0569DDEF9FD64BA7FC6B1FB13CC35AD5CD6FA1C72C0',
         }}
       >
         Block
       </Text>
       <Text
         link={{
-          href: '/chain',
+          href: '/chain?id=main',
         }}
       >
         Chain

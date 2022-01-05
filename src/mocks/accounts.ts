@@ -16,4 +16,9 @@ export const accounts: Accounts = {
     type: 'System',
     name: 'main',
   },
+  genesis: {
+    address: 'genesis',
+    type: 'System',
+    name: 'genesis',
+  },
 };

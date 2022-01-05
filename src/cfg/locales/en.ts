@@ -46,6 +46,11 @@ export const en: EchoMsgs = {
   'label-unclaimed': 'Unclaimed',
   'label-date': 'Date',
   'label-chain': 'Chain',
+  'label-prevhash': 'Previous Hash',
+  'label-tx': 'Transactions',
+  'label-validator': 'Validator',
+  'label-fees': 'Fees',
+  'label-contract': 'Contract',
   //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',

@@ -64,7 +64,7 @@ export const LayoutPage = ({ children }: LayoutPageProps) => {
       </div>
       <Header height={HEADER_HEIGHT} />
       <Container>
-        <Box pt={{ xs: 3, md: 6, lg: 9 }}>{children}</Box>
+        <Box pt={{ xs: 3, md: 6, lg: 8 }}>{children}</Box>
         <TempNav />
       </Container>
       <div style={{ width: '100%', height: `${FOOTER_HEIGHT + 90}px` }} />

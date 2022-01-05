@@ -21,7 +21,7 @@ export const blocks: Blocks = {
     prevHash:
       '6B66C26B3CFC1E75460F86C41557D12B0B83E57A06D839568B75F8886140B823',
     blockHeight: 348127,
-    transactions: 1,
+    transactions: 69,
     validator: 'genesis',
     fees: 'genesis',
   },
@@ -32,7 +32,7 @@ export const blocks: Blocks = {
     prevHash:
       '73B7E6987BCF7E1C1698231FDA9320E5C5B66118E1C4C3D52727CFEA5BFC8483',
     blockHeight: 348126,
-    transactions: 1,
+    transactions: 420,
     validator: 'genesis',
     fees: 'genesis',
   },
@@ -43,7 +43,7 @@ export const blocks: Blocks = {
     // prevHash:
     //   '5FEB072EBFC72257716D302C07696F78D13BCFA47E864ED40AD6B502953D0A36',
     blockHeight: 348125,
-    transactions: 1,
+    transactions: 1337,
     validator: 'genesis',
     fees: 'genesis',
   },

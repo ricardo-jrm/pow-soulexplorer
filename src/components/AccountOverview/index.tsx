@@ -29,7 +29,7 @@ export const AccountOverview = ({ account }: AccountOverviewProps) => {
         {account.type}
       </Text>
       <Text
-        label={echo('label-name')}
+        label={echo('label-contract')}
         spacing={1}
         paragraph
         clipboard
