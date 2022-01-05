@@ -40,7 +40,7 @@ export const ChainOverview = ({ chain }: ChainOverviewProps) => {
         {chain.address}
       </Text>
       <Text label={echo('label-blockheight')} spacing={1} paragraph clipboard>
-        {chain.blockHeight}
+        {`#${chain.blockHeight}`}
       </Text>
       <Text
         label={echo('label-lastblock')}
