@@ -41,7 +41,11 @@ export const en: EchoMsgs = {
   'label-address': 'Address',
   'label-blockheight': 'Block Height',
   'label-lastblock': 'Last Block',
+  'label-type': 'Type',
+  'label-stake': 'Stake',
+  'label-unclaimed': 'Unclaimed',
   //
   chain: 'Chain',
+  account: 'Account',
   'not-found': 'Not Found',
 };

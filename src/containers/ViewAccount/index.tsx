@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { Box } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
-
-const OverviewComponent = () => <>ACCOUNT OVERVIEW</>;
+import { NotFound } from '../../components/404';
+import { accounts, Account } from '../../mocks/accounts';
+import { AccountOverview } from '../../components/AccountOverview';
 
 const BalancesComponent = () => <>BALANCES</>;
 
@@ -14,7 +16,13 @@ const TxListComponent = () => <>TX LIST</>;
  * ViewAccount
  */
 export const ViewAccount = () => {
+  const { query } = useRouter();
   const { echo } = useEcho();
+
+  const account = useMemo<Account>(
+    () => accounts[(query.address as string) || 'main'],
+    [query],
+  );
 
   const tabs: NavTabRecord = useMemo(
     () => ({
@@ -22,7 +30,7 @@ export const ViewAccount = () => {
         id: 'overview',
         label: echo('tab-overview'),
         href: '/account',
-        component: <OverviewComponent />,
+        component: <AccountOverview account={account} />,
       },
       balances: {
         id: 'balances',
@@ -37,7 +45,7 @@ export const ViewAccount = () => {
         component: <TxListComponent />,
       },
     }),
-    [echo],
+    [echo, account],
   );
 
   return (
@@ -45,9 +53,15 @@ export const ViewAccount = () => {
       <Text variant="h3" sx={{ color: '#fff' }}>
         {echo('account-title')}
       </Text>
-      <Box py={3}>
-        <NavTabs tabs={tabs} tabsDefault="overview" />
-      </Box>
+      {account ? (
+        <Box py={3}>
+          <NavTabs tabs={tabs} tabsDefault="overview" />
+        </Box>
+      ) : (
+        <Box py={3}>
+          <NotFound kind="account" />
+        </Box>
+      )}
     </Box>
   );
 };
