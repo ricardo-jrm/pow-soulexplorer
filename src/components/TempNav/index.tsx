@@ -1,5 +1,21 @@
 import React from 'react';
 import { Text } from '../Text';
+import { NavTabs, NavTabRecord } from '../NavTabs';
+
+const tempTabs: NavTabRecord = {
+  tab1: {
+    id: 'tab1',
+    label: 'Tab 1',
+    href: '/nexus',
+    component: () => <>TAB 1</>,
+  },
+  tab2: {
+    id: 'tab2',
+    label: 'Tab 2',
+    href: '/nexus',
+    component: () => <>TAB 2</>,
+  },
+};
 
 export const TempNav = () => {
   return (
@@ -60,6 +76,9 @@ export const TempNav = () => {
       >
         tx
       </Text>
+      <div>
+        <NavTabs tabs={tempTabs} />
+      </div>
     </div>
   );
 };
