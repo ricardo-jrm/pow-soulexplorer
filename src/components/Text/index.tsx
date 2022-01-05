@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, CSSProperties } from 'react';
 import { useSnackbar } from 'notistack';
 import NextLink from 'next/link';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -83,6 +83,10 @@ export interface TextProps
    */
   link?: LinkProps;
   /**
+   * Link style options
+   */
+  linkStyles?: CSSProperties | undefined;
+  /**
    * Truncate text options
    */
   truncate?: {
@@ -108,6 +112,7 @@ export const Text = ({
   clipboard,
   variant = 'body1',
   link,
+  linkStyles,
   truncate,
   capitalize,
   sx,
@@ -155,27 +160,55 @@ export const Text = ({
       const linkProps = external
         ? { target: '_blank', rel: 'noopener noreferrer' }
         : {};
+      const linkSx = linkStyles || {};
       const linkComponent = (
-        <MuiLink variant={variant} href={href} {...linkProps} sx={sx}>
+        <MuiLink
+          variant={variant}
+          href={href}
+          {...linkProps}
+          sx={sx}
+          style={linkSx}
+        >
           {strDisplay}
         </MuiLink>
       );
       if (external) {
-        return linkComponent;
+        return (
+          <Typography
+            variant={variant}
+            {...propsTypo}
+            sx={sx}
+            style={{ wordBreak: 'break-all' }}
+          >
+            {linkComponent}
+          </Typography>
+        );
       }
       return (
-        <NextLink href={href} passHref>
-          {linkComponent}
-        </NextLink>
+        <Typography
+          variant={variant}
+          {...propsTypo}
+          sx={sx}
+          style={{ wordBreak: 'break-all' }}
+        >
+          <NextLink href={href} passHref>
+            {linkComponent}
+          </NextLink>
+        </Typography>
       );
     }
 
     return (
-      <Typography variant={variant} {...propsTypo} sx={sx}>
+      <Typography
+        variant={variant}
+        {...propsTypo}
+        sx={sx}
+        style={{ wordBreak: 'break-all' }}
+      >
         {strDisplay}
       </Typography>
     );
-  }, [variant, propsTypo, copy, link, truncate, sx]);
+  }, [variant, propsTypo, copy, link, truncate, sx, linkStyles]);
 
   return (
     <Grid
