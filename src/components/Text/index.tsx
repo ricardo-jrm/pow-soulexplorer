@@ -9,6 +9,7 @@ import {
   GridSpacing,
   Link as MuiLink,
   IconButton,
+  Tooltip,
 } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { useFury } from '@ricardo-jrm/fury';
@@ -227,23 +228,25 @@ export const Text = ({
       <Grid item>{result}</Grid>
       {clipboard && (
         <Grid item>
-          <Typography variant={variant} {...propsTypo} sx={sx}>
-            <CopyToClipboard text={copy}>
-              <IconButton
-                size="small"
-                onClick={(e) => {
-                  enqueueSnackbar('Copied to clipboard');
-                  e.stopPropagation();
-                }}
-              >
-                <ContentCopyIcon
-                  style={{
-                    fontSize: furyActive.typography[variant].fontSize,
+          <Tooltip title={echo('copy-to-clipboard')}>
+            <Typography variant={variant} {...propsTypo} sx={sx}>
+              <CopyToClipboard text={copy}>
+                <IconButton
+                  size="small"
+                  onClick={(e) => {
+                    enqueueSnackbar('Copied to clipboard');
+                    e.stopPropagation();
                   }}
-                />
-              </IconButton>
-            </CopyToClipboard>
-          </Typography>
+                >
+                  <ContentCopyIcon
+                    style={{
+                      fontSize: furyActive.typography[variant].fontSize,
+                    }}
+                  />
+                </IconButton>
+              </CopyToClipboard>
+            </Typography>
+          </Tooltip>
         </Grid>
       )}
     </Grid>

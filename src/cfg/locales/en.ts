@@ -45,6 +45,7 @@ export const en: EchoMsgs = {
   'label-stake': 'Stake',
   'label-unclaimed': 'Unclaimed',
   //
+  'copy-to-clipboard': 'Copy to clipboard',
   chain: 'Chain',
   account: 'Account',
   'not-found': 'Not Found',
