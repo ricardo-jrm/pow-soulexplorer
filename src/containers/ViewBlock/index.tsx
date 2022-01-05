@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { Box } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
-
-const OverviewComponent = () => <>BLOCK OVERVIEW</>;
+import { NotFound } from '../../components/404';
+import { blocks, Block } from '../../mocks/blocks';
+import { BlockOverview } from '../../components/BlockOverview';
 
 const TxListComponent = () => <>TX LIST</>;
 
@@ -16,7 +18,13 @@ const OraclesComponent = () => <>Oracles</>;
  * ViewBlock
  */
 export const ViewBlock = () => {
+  const { query } = useRouter();
   const { echo } = useEcho();
+
+  const block = useMemo<Block>(
+    () => blocks[(query.hash as string) || 'main'],
+    [query],
+  );
 
   const tabs: NavTabRecord = useMemo(
     () => ({
@@ -24,7 +32,7 @@ export const ViewBlock = () => {
         id: 'overview',
         label: echo('tab-overview'),
         href: '/block',
-        component: <OverviewComponent />,
+        component: <BlockOverview block={block} />,
       },
       txlist: {
         id: 'txlist',
@@ -45,7 +53,7 @@ export const ViewBlock = () => {
         component: <OraclesComponent />,
       },
     }),
-    [echo],
+    [echo, block],
   );
 
   return (
@@ -53,9 +61,15 @@ export const ViewBlock = () => {
       <Text variant="h3" sx={{ color: '#fff' }}>
         {echo('block-title')}
       </Text>
-      <Box py={3}>
-        <NavTabs tabs={tabs} tabsDefault="overview" />
-      </Box>
+      {block ? (
+        <Box py={3}>
+          <NavTabs tabs={tabs} tabsDefault="overview" />
+        </Box>
+      ) : (
+        <Box py={3}>
+          <NotFound kind="block" />
+        </Box>
+      )}
     </Box>
   );
 };

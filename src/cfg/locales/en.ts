@@ -44,9 +44,12 @@ export const en: EchoMsgs = {
   'label-type': 'Type',
   'label-stake': 'Stake',
   'label-unclaimed': 'Unclaimed',
+  'label-date': 'Date',
+  'label-chain': 'Chain',
   //
   'copy-to-clipboard': 'Copy to clipboard',
   chain: 'Chain',
   account: 'Account',
+  block: 'Block',
   'not-found': 'Not Found',
 };
