@@ -232,11 +232,11 @@ export const Text = ({
         <Grid item>
           <Tooltip title={dateRelative(formatDate).fromNow}>
             <Typography variant={variant} {...propsTypo} sx={sx}>
-              <CopyToClipboard text={dateRelative(formatDate).fromNow}>
+              <CopyToClipboard text={copy}>
                 <IconButton
                   size="small"
                   onClick={(e) => {
-                    enqueueSnackbar(dateRelative(formatDate).fromNow);
+                    enqueueSnackbar(echo('copied-to-clipboard'));
                     e.stopPropagation();
                   }}
                 >
@@ -259,7 +259,7 @@ export const Text = ({
                 <IconButton
                   size="small"
                   onClick={(e) => {
-                    enqueueSnackbar('Copied to clipboard');
+                    enqueueSnackbar(echo('copied-to-clipboard'));
                     e.stopPropagation();
                   }}
                 >

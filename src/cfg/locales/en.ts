@@ -48,6 +48,7 @@ export const en: EchoMsgs = {
   'label-chain': 'Chain',
   //
   'copy-to-clipboard': 'Copy to clipboard',
+  'copied-to-clipboard': 'Copied to clipboard',
   chain: 'Chain',
   account: 'Account',
   block: 'Block',
