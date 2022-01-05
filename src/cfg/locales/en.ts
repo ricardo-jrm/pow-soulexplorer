@@ -36,4 +36,12 @@ export const en: EchoMsgs = {
   'tab-script': 'Script',
   'tab-abi': 'ABI',
   'tab-members': 'Members',
+  //
+  'label-name': 'Name',
+  'label-address': 'Address',
+  'label-blockheight': 'Block Height',
+  'label-lastblock': 'Last Block',
+  //
+  chain: 'Chain',
+  'not-found': 'Not Found',
 };
