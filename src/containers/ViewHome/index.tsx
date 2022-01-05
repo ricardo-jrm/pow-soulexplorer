@@ -38,7 +38,7 @@ export const ViewHome = () => {
           minHeight: `calc(100vh - ${HEADER_HEIGHT}px - ${FOOTER_HEIGHT}px)`,
         }}
         alignContent="center"
-        spacing={3}
+        spacing={2}
       >
         <Grid
           item
@@ -76,112 +76,138 @@ export const ViewHome = () => {
               <Box px={1} pb={3} sx={{ minHeight: '108px' }}>
                 <Grid container>
                   <Grid item xs={12} md={6} pb={0.5}>
-                    <Text
-                      link={{
-                        external: true,
-                        href: 'https://medium.com/phantasticphantasma/phantasma-x-raze-network-cbc7452d9a58',
-                      }}
-                      truncate={{
-                        len: 36,
-                      }}
-                      sx={{
-                        textDecoration: 'none',
-                        color: furyActive.palette.secondary.main,
-                        fontWeight: 600,
-                      }}
-                    >
-                      ● Phantasma X Raze Network
-                    </Text>
+                    <Tooltip title="Phantasma X Raze Network" placement="top">
+                      <Box>
+                        <Text
+                          link={{
+                            external: true,
+                            href: 'https://medium.com/phantasticphantasma/phantasma-x-raze-network-cbc7452d9a58',
+                          }}
+                          truncate={{
+                            len: 36,
+                          }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: furyActive.palette.secondary.main,
+                          }}
+                        >
+                          ● Phantasma X Raze Network
+                        </Text>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={12} md={6} pb={0.5}>
-                    <Text
-                      link={{
-                        external: true,
-                        href: 'https://medium.com/phantasticphantasma/poltergeist-2-0-adf58193a4e0',
-                      }}
-                      truncate={{
-                        len: 36,
-                      }}
-                      sx={{
-                        textDecoration: 'none',
-                        color: furyActive.palette.secondary.main,
-                        fontWeight: 600,
-                      }}
-                    >
-                      ● Poltergeist 2.0
-                    </Text>
+                    <Tooltip title="Poltergeist 2.0" placement="top">
+                      <Box>
+                        <Text
+                          link={{
+                            external: true,
+                            href: 'https://medium.com/phantasticphantasma/poltergeist-2-0-adf58193a4e0',
+                          }}
+                          truncate={{
+                            len: 36,
+                          }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: furyActive.palette.secondary.main,
+                          }}
+                        >
+                          ● Poltergeist 2.0
+                        </Text>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={12} md={6} pb={0.5}>
-                    <Text
-                      link={{
-                        external: true,
-                        href: 'https://medium.com/phantasticphantasma/steam-integration-through-pavillion-on-phantasma-chain-a35cb0b4bf6c',
-                      }}
-                      truncate={{
-                        len: 36,
-                      }}
-                      sx={{
-                        textDecoration: 'none',
-                        color: furyActive.palette.secondary.main,
-                        fontWeight: 600,
-                      }}
+                    <Tooltip
+                      title="Steam Integration through Pavillion on Phantasma Chain!"
+                      placement="top"
                     >
-                      ● Steam Integration through Pavillion on Phantasma Chain!
-                    </Text>
+                      <Box>
+                        <Text
+                          link={{
+                            external: true,
+                            href: 'https://medium.com/phantasticphantasma/steam-integration-through-pavillion-on-phantasma-chain-a35cb0b4bf6c',
+                          }}
+                          truncate={{
+                            len: 36,
+                          }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: furyActive.palette.secondary.main,
+                          }}
+                        >
+                          ● Steam Integration through Pavillion on Phantasma
+                          Chain!
+                        </Text>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={12} md={6} pb={0.5}>
-                    <Text
-                      link={{
-                        external: true,
-                        href: 'https://medium.com/phantasticphantasma/phantasma-chain-x-aleph-im-dc74b44cc2a7',
-                      }}
-                      truncate={{
-                        len: 36,
-                      }}
-                      sx={{
-                        textDecoration: 'none',
-                        color: furyActive.palette.secondary.main,
-                        fontWeight: 600,
-                      }}
-                    >
-                      ● Phantasma Chain X Aleph.im
-                    </Text>
+                    <Tooltip title="Phantasma Chain X Aleph.im" placement="top">
+                      <Box>
+                        <Text
+                          link={{
+                            external: true,
+                            href: 'https://medium.com/phantasticphantasma/phantasma-chain-x-aleph-im-dc74b44cc2a7',
+                          }}
+                          truncate={{
+                            len: 36,
+                          }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: furyActive.palette.secondary.main,
+                          }}
+                        >
+                          ● Phantasma Chain X Aleph.im
+                        </Text>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={12} md={6} pb={0.5}>
-                    <Text
-                      link={{
-                        external: true,
-                        href: 'https://medium.com/phantasticphantasma/world-premiere-first-ever-cross-chain-nft-marketplace-364d446bf563',
-                      }}
-                      truncate={{
-                        len: 36,
-                      }}
-                      sx={{
-                        textDecoration: 'none',
-                        color: furyActive.palette.secondary.main,
-                        fontWeight: 600,
-                      }}
+                    <Tooltip
+                      title="World premiere: First ever cross-chain NFT marketplace!"
+                      placement="top"
                     >
-                      ● World premiere: First ever cross-chain NFT marketplace!
-                    </Text>
+                      <Box>
+                        <Text
+                          link={{
+                            external: true,
+                            href: 'https://medium.com/phantasticphantasma/world-premiere-first-ever-cross-chain-nft-marketplace-364d446bf563',
+                          }}
+                          truncate={{
+                            len: 36,
+                          }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: furyActive.palette.secondary.main,
+                          }}
+                        >
+                          ● World premiere: First ever cross-chain NFT
+                          marketplace!
+                        </Text>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={12} md={6} pb={0.5}>
-                    <Text
-                      link={{
-                        external: true,
-                        href: 'https://medium.com/phantasticphantasma/main-net-launch-affaff806020',
-                      }}
-                      truncate={{
-                        len: 36,
-                      }}
-                      sx={{
-                        textDecoration: 'none',
-                        fontWeight: 600,
-                        color: furyActive.palette.secondary.main,
-                      }}
-                    >
-                      ● Main Net Launch!
-                    </Text>
+                    <Tooltip title="Main Net Launch!" placement="top">
+                      <Box>
+                        <Text
+                          link={{
+                            external: true,
+                            href: 'https://medium.com/phantasticphantasma/main-net-launch-affaff806020',
+                          }}
+                          truncate={{
+                            len: 36,
+                          }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: furyActive.palette.secondary.main,
+                          }}
+                        >
+                          ● Main Net Launch!
+                        </Text>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Box>
@@ -190,6 +216,7 @@ export const ViewHome = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://medium.com/phantasticphantasma"
+                  sx={{ textDecoration: 'none' }}
                 >
                   <Button variant="contained" color="secondary">
                     {echo('btn-blog')}
@@ -210,7 +237,7 @@ export const ViewHome = () => {
               </Box>
               <Box textAlign="center">
                 <NextLink href="/nexus" passHref>
-                  <MuiLink href="/nexus">
+                  <MuiLink href="/nexus" sx={{ textDecoration: 'none' }}>
                     <Button variant="contained" color="secondary">
                       {echo('btn-nexus')}
                     </Button>
@@ -230,7 +257,7 @@ export const ViewHome = () => {
                 <Box>
                   <Grid container>
                     <Grid item xs={12} md={12}>
-                      <Box py={1}>
+                      <Box pb={2.1}>
                         <HomeChart height={234} />
                       </Box>
                     </Grid>
@@ -239,7 +266,7 @@ export const ViewHome = () => {
                 <Box textAlign="center">
                   <Tooltip title={echo('wip')}>
                     <Box display="inline-block">
-                      <Button variant="contained" color="secondary" disabled>
+                      <Button variant="contained" color="secondary">
                         {echo('btn-metrics')}
                       </Button>
                     </Box>

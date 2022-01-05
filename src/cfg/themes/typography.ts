@@ -65,6 +65,7 @@ export const typography: ThemeOptions['typography'] = {
   button: {
     fontFamily: '"Open Sans"',
     textTransform: 'none',
+    fontWeight: 600,
   },
   caption: {
     fontFamily: '"PT Sans"',

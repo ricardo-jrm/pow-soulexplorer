@@ -7,12 +7,12 @@ const randomInRange = (min: number, max: number) => {
 };
 
 export const kaioken = (colors: string[]) => {
-  const duration = 166000;
+  const duration = 162000;
   const animationEnd = Date.now() + duration;
   let skew = 1;
 
   const timeLeft = animationEnd - Date.now();
-  const ticks = Math.max(25, 125 * (timeLeft / duration));
+  const ticks = Math.max(50, 250 * (timeLeft / duration));
   skew = Math.max(0.8, skew - 0.001);
 
   (function frame() {

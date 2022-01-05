@@ -137,11 +137,11 @@ export const HomeChart = ({ height }: HomeChartProps) => {
         pointColor={isDark ? '#121212' : '#fff'}
         pointBorderWidth={3}
         pointBorderColor={{ from: 'serieColor', modifiers: [] }}
-        margin={{ top: 12, right: 45, bottom: 69, left: 45 }}
+        margin={{ top: 9, right: 150, bottom: 30, left: 150 }}
         axisBottom={{
           tickSize: 5,
           tickPadding: 5,
-          tickRotation: 45,
+          tickRotation: 18,
         }}
         axisLeft={{
           tickSize: 5,

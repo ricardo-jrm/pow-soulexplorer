@@ -23,22 +23,13 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
 
   const runZ = useCallback(() => {
     handleOpen();
-    setTimeout(() => kaioken(['#dd70a5']), 6850);
-    setTimeout(
-      () => superSaiyan(['#d54d8f', '#807CAE', '#2A293B'], 9900),
-      14400,
-    );
+    setTimeout(() => kaioken(['#f7e21e']), 6850);
+    setTimeout(() => superSaiyan(['#44ff00', '#ff7c00'], 9900), 14400);
     setTimeout(() => goEvenFurtherBeyond(11000), 51700);
-    setTimeout(
-      () => superSaiyan(['#d54d8f', '#807CAE', '#2A293B'], 15000),
-      64200,
-    );
+    setTimeout(() => superSaiyan(['#44ff00', '#ff7c00'], 15000), 64200);
     setTimeout(() => goEvenFurtherBeyond(15000), 64200);
-    setTimeout(
-      () => superSaiyan(['#d54d8f', '#807CAE', '#2A293B'], 21000),
-      123900,
-    );
-    setTimeout(() => goEvenFurtherBeyond(21000), 123900);
+    setTimeout(() => superSaiyan(['#44ff00', '#ff7c00'], 26000), 123900);
+    setTimeout(() => goEvenFurtherBeyond(26000), 123900);
     setTimeout(() => handleClose(), 168000);
   }, [handleOpen, handleClose]);
 
