@@ -1,0 +1,22 @@
+import { ThemeOptions } from '@ricardo-jrm/fury/dist/mui';
+
+export const overrides: ThemeOptions['components'] = {
+  MuiPaper: {
+    styleOverrides: {
+      root: {
+        boxShadow: '0px 9px 15px rgba(3, 2, 2, 0.2)',
+        border: '1px solid rgba(0, 0, 0, 0.09)',
+      },
+    },
+  },
+  MuiDialog: {
+    styleOverrides: {
+      paper: {
+        backgroundColor: 'transparent',
+        boxShadow: '0px 0px 0px',
+        border: 0,
+        backgroundImage: 'none',
+      },
+    },
+  },
+};

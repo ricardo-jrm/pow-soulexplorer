@@ -54,7 +54,7 @@
     "indent": "off",
     "semi": "off",
     "implicit-arrow-linebreak": "off",
-    "arrow-body-style": "warn",
+    "arrow-body-style": 0,
     "no-multiple-empty-lines": "off",
     "no-trailing-spaces": "off",
     "object-curly-spacing": "off",
@@ -87,6 +87,13 @@
     "no-multi-spaces": "warn",
     "react/jsx-indent-props": "warn",
     "react/jsx-curly-brace-presence": 0,
-    "react/require-default-props": 0
+    "react/require-default-props": 0,
+    "react/jsx-wrap-multilines": 0,
+    "max-len": 0,
+    "react/jsx-max-props-per-line": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "block-spacing": 0,
+    "brace-style": 0,
+    "react/jsx-closing-bracket-location": 0
   }
 }

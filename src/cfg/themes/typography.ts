@@ -1,4 +1,6 @@
-import { ThemeOptions } from '@ricardo-jrm/fury/dist/mui';
+import { ThemeOptions, createTheme } from '@ricardo-jrm/fury/dist/mui';
+
+const { breakpoints } = createTheme();
 
 export const typography: ThemeOptions['typography'] = {
   fontFamily: [
@@ -20,24 +22,45 @@ export const typography: ThemeOptions['typography'] = {
   ].join(','),
   h1: {
     fontFamily: '"Open Sans"',
-    fontSize: '4vw',
-    lineHeight: '4vw',
+    fontSize: '60px',
+    lineHeight: '60px',
     fontWeight: 600,
+    [breakpoints.down('sm')]: {
+      fontSize: '30px',
+      lineHeight: '30px',
+    },
   },
   h2: {
     fontFamily: '"Open Sans"',
+    fontWeight: 600,
   },
   h3: {
     fontFamily: '"Open Sans"',
+    fontWeight: 600,
+    fontSize: '45px',
+    lineHeight: '45px',
+    [breakpoints.down('sm')]: {
+      fontSize: '25px',
+      lineHeight: '25px',
+    },
   },
   h4: {
     fontFamily: '"Open Sans"',
+    fontWeight: 600,
+    fontSize: '30px',
+    lineHeight: '30px',
+    [breakpoints.down('sm')]: {
+      fontSize: '21px',
+      lineHeight: '21px',
+    },
   },
   h5: {
     fontFamily: '"Open Sans"',
+    fontWeight: 600,
   },
   h6: {
     fontFamily: '"Open Sans"',
+    fontWeight: 600,
   },
   subtitle1: {
     fontFamily: '"PT Sans"',
@@ -52,7 +75,9 @@ export const typography: ThemeOptions['typography'] = {
     fontFamily: '"PT Sans"',
   },
   button: {
-    fontFamily: '"PT Sans"',
+    fontFamily: '"Open Sans"',
+    textTransform: 'none',
+    fontWeight: 600,
   },
   caption: {
     fontFamily: '"PT Sans"',

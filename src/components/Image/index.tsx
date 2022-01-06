@@ -1,8 +1,5 @@
 /* eslint-disable no-nested-ternary */
 import React, { ImgHTMLAttributes } from 'react';
-// import NextImage, { ImageProps as NextImageProps } from 'next/image';
-
-// export const Image = (props: NextImageProps) => <NextImage {...props} />;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface ImageProps extends ImgHTMLAttributes<any> {
@@ -14,7 +11,14 @@ interface ImageProps extends ImgHTMLAttributes<any> {
 }
 
 // eslint-disable-next-line arrow-body-style
-export const Image = ({ src, title, alt, height, responsive }: ImageProps) => {
+export const Image = ({
+  src,
+  title,
+  alt,
+  height,
+  responsive,
+  style,
+}: ImageProps) => {
   return (
     <img
       src={src}
@@ -24,6 +28,7 @@ export const Image = ({ src, title, alt, height, responsive }: ImageProps) => {
         // eslint-disable-next-line no-unneeded-ternary
         height: height ? height : responsive ? 'auto !important' : undefined,
         maxWidth: responsive ? '100% !important' : undefined,
+        ...style,
       }}
     />
   );
