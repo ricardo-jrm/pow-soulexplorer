@@ -53,7 +53,7 @@ export const TempNav = () => {
       </Text>
       <Text
         link={{
-          href: '/dao',
+          href: '/dao?id=masters',
         }}
       >
         DAO

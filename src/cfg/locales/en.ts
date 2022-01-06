@@ -54,11 +54,15 @@ export const en: EchoMsgs = {
   'label-script': 'Script',
   'label-viewongithub': 'View on Github',
   'label-abi': 'ABI',
+  'label-id': 'ID',
+  'label-size': 'Size',
   //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',
-  chain: 'Chain',
   account: 'Account',
   block: 'Block',
+  chain: 'Chain',
+  contract: 'Contract',
+  dao: 'DAO',
   'not-found': 'Not Found',
 };

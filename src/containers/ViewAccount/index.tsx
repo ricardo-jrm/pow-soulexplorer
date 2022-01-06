@@ -20,7 +20,7 @@ export const ViewAccount = () => {
   const { echo } = useEcho();
 
   const account = useMemo<Account>(
-    () => accounts[(query.address as string) || 'main'],
+    () => accounts[query.address as string],
     [query],
   );
 

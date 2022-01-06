@@ -16,7 +16,7 @@ export const ViewContract = () => {
   const { echo } = useEcho();
 
   const contract = useMemo<Contract>(
-    () => contracts[(query.name as string) || 'main'],
+    () => contracts[query.name as string],
     [query],
   );
 
@@ -55,7 +55,7 @@ export const ViewContract = () => {
         </Box>
       ) : (
         <Box py={3}>
-          <NotFound kind="account" />
+          <NotFound kind="contract" />
         </Box>
       )}
     </Box>

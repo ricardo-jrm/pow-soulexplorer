@@ -21,10 +21,7 @@ export const ViewBlock = () => {
   const { query } = useRouter();
   const { echo } = useEcho();
 
-  const block = useMemo<Block>(
-    () => blocks[(query.hash as string) || 'main'],
-    [query],
-  );
+  const block = useMemo<Block>(() => blocks[query.hash as string], [query]);
 
   const tabs: NavTabRecord = useMemo(
     () => ({
