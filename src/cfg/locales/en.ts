@@ -68,6 +68,9 @@ export const en: EchoMsgs = {
   'label-expiration': 'Expiration',
   'label-balance': 'Balance',
   'label-value': 'Value',
+  'label-kind': 'Kind',
+  'label-content': 'Content',
+  'label-url': 'URL',
   'chip-transferable': 'Transferable',
   'chip-fungible': 'Fungible',
   'meta-description':

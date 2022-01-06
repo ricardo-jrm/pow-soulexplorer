@@ -35,10 +35,9 @@ export const transactions: Txs = {
     events: [
       {
         kind: 'ValidatorElect',
-        address: 'main',
+        address: 'genesis',
         contract: 'validator',
-        content:
-          '220100AC42F8B9E617BE1524893A76A1B0CCF937782023BA35301948A8F94CEBC67A1F',
+        content: '220100AC42F8B9E617BE1524893A76A1B0CCF',
       },
       {
         kind: 'TokenStake',
