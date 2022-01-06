@@ -38,7 +38,7 @@ export const ItemsList = ({ cols, rows }: ItemsListProps) => {
   return (
     <Box>
       {/* Desktop */}
-      <Box display={{ xs: 'none', lg: 'block' }}>
+      <Box display={{ xs: 'none', md: 'block' }}>
         <Grid
           container
           alignItems="center"
@@ -70,7 +70,7 @@ export const ItemsList = ({ cols, rows }: ItemsListProps) => {
 
       {/* Mobile */}
       <Box
-        display={{ lg: 'none' }}
+        display={{ md: 'none' }}
         sx={{ borderTop: `1px solid ${furyActive.palette.divider}` }}
       >
         {rows.map((row) => (
