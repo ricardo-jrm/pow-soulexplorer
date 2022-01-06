@@ -181,6 +181,8 @@ const HashCell = ({ hash }: HashCellProps) => {
       sx={{
         color: furyActive.palette.secondary.main,
       }}
+      clipboard
+      spacing={1}
     >
       {hash}
     </Text>

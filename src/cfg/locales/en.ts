@@ -71,6 +71,7 @@ export const en: EchoMsgs = {
   'label-kind': 'Kind',
   'label-content': 'Content',
   'label-url': 'URL',
+  'label-height': 'Height',
   'chip-transferable': 'Transferable',
   'chip-fungible': 'Fungible',
   'meta-description':

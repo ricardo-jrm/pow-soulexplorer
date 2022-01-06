@@ -48,3 +48,5 @@ export const blocks: Blocks = {
     fees: 'genesis',
   },
 };
+
+export const blocksArr: Block[] = Object.values(blocks);

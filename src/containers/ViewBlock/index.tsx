@@ -45,6 +45,8 @@ const HashCell = ({ hash }: HashCellProps) => {
       sx={{
         color: furyActive.palette.secondary.main,
       }}
+      clipboard
+      spacing={1}
     >
       {hash}
     </Text>
@@ -107,7 +109,11 @@ const ContractCell = ({ contract }: ContractCellProps) => (
 interface ContentCellProps {
   content: string;
 }
-const ContentCell = ({ content }: ContentCellProps) => <Text>{content}</Text>;
+const ContentCell = ({ content }: ContentCellProps) => (
+  <Text clipboard spacing={1}>
+    {content}
+  </Text>
+);
 
 const eventCols: ListCol[] = [
   {
