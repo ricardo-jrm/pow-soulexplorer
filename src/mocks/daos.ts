@@ -41,3 +41,5 @@ export const daos: Daos = {
     members,
   },
 };
+
+export const daosArr: Dao[] = Object.values(daos);

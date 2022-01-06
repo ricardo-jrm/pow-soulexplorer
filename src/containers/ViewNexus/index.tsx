@@ -6,6 +6,7 @@ import { Text } from '../../components/Text';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
 import { ItemsList, ListRow, ListCol } from '../../components/ItemsList';
 import { chains } from '../../mocks/chains';
+import { daosArr } from '../../mocks/daos';
 
 const chain = chains.main;
 
@@ -85,7 +86,7 @@ const chainsRows: ListRow[] = [
       component: <AddressCell address={chain.address} />,
     },
     {
-      label: 'label-blockheight',
+      label: 'label-height',
       cols: 3,
       component: <HeightCell height={`${chain.blockHeight}`} />,
     },
@@ -96,7 +97,108 @@ const ChainsComponent = () => <ItemsList cols={chainsCols} rows={chainsRows} />;
 
 const TokensComponent = () => <>TOKENS</>;
 
-const DaosComponent = () => <>DAOS</>;
+interface MembersNameCellProps {
+  name: string;
+  id: string;
+}
+const MembersNameCell = ({ name, id }: MembersNameCellProps) => {
+  const { furyActive } = useFury();
+
+  return (
+    <Text
+      link={{
+        href: `/dao?id=${id}`,
+      }}
+      sx={{
+        color: furyActive.palette.secondary.main,
+      }}
+    >
+      {name}
+    </Text>
+  );
+};
+
+interface MembersAddressCellProps {
+  address: string;
+}
+const MembersAddressCell = ({ address }: MembersAddressCellProps) => {
+  const { furyActive } = useFury();
+
+  return (
+    <Text
+      link={{
+        href: `/account?address=${address}`,
+      }}
+      sx={{
+        color: furyActive.palette.secondary.main,
+      }}
+      clipboard
+      spacing={1}
+    >
+      {address}
+    </Text>
+  );
+};
+
+interface MembersSizeCellProps {
+  size: number;
+}
+const MembersSizeCell = ({ size }: MembersSizeCellProps) => (
+  <Text formatNumber>{size}</Text>
+);
+
+const membersCols: ListCol[] = [
+  {
+    label: 'label-name',
+    cols: 3,
+  },
+  {
+    label: 'label-address',
+    cols: 7,
+  },
+  {
+    label: 'label-size',
+    cols: 2,
+  },
+];
+const membersRows: ListRow[] = [
+  [
+    {
+      label: 'label-name',
+      cols: 3,
+      component: <MembersNameCell name={daosArr[0].name} id={daosArr[0].id} />,
+    },
+    {
+      label: 'label-address',
+      cols: 7,
+      component: <MembersAddressCell address={daosArr[0].address} />,
+    },
+    {
+      label: 'label-size',
+      cols: 2,
+      component: <MembersSizeCell size={daosArr[0].size} />,
+    },
+  ],
+  [
+    {
+      label: 'label-name',
+      cols: 3,
+      component: <MembersNameCell name={daosArr[1].name} id={daosArr[1].id} />,
+    },
+    {
+      label: 'label-address',
+      cols: 7,
+      component: <MembersAddressCell address={daosArr[1].address} />,
+    },
+    {
+      label: 'label-size',
+      cols: 2,
+      component: <MembersSizeCell size={daosArr[1].size} />,
+    },
+  ],
+];
+
+const DaosComponent = () => <ItemsList cols={membersCols} rows={membersRows} />;
 
 /**
  * ViewNexus
