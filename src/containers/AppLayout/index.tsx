@@ -38,7 +38,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
     <Box>
       <MetaTags />
       <Konami action={runZ} />
-      {pathname === '/' ? (
+      {pathname === '/' || pathname === '/blankhome' ? (
         <LayoutHome>{children}</LayoutHome>
       ) : (
         <LayoutPage>{children}</LayoutPage>

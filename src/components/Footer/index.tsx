@@ -27,7 +27,10 @@ export const Footer = ({ height }: FooterProps) => {
 
   const { furyActive } = useFury();
 
-  const isHome = useMemo(() => pathname === '/', [pathname]);
+  const isHome = useMemo(
+    () => pathname === '/' || pathname === '/blankhome',
+    [pathname],
+  );
 
   return (
     <Box>

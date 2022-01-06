@@ -3,7 +3,6 @@ import { useFury } from '@ricardo-jrm/fury';
 import { Box, Container } from '@ricardo-jrm/fury/dist/mui';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { TempNav } from '../../components/TempNav';
 import { HEADER_HEIGHT, FOOTER_HEIGHT } from '../../cfg/layout';
 
 interface LayoutPageProps {
@@ -65,7 +64,6 @@ export const LayoutPage = ({ children }: LayoutPageProps) => {
       <Header height={HEADER_HEIGHT} />
       <Container>
         <Box pt={{ xs: 3, md: 6, lg: 8 }}>{children}</Box>
-        <TempNav />
       </Container>
       <div style={{ width: '100%', height: `${FOOTER_HEIGHT + 90}px` }} />
       <Footer height={FOOTER_HEIGHT} />
