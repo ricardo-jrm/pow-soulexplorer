@@ -112,13 +112,19 @@
     "@ricardo-jrm/fury": "^3.0.3",
     "@ricardo-jrm/pain": "^2.1.0",
     "@ricardo-jrm/reaper": "^1.0.1",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
     "canvas-confetti": "^1.4.0",
     "nanoid": "^3.1.30",
     "next": "^12.0.7",
     "notistack": "^2.0.3",
+    "process": "^0.11.10",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.2",
-    "react-konami-code": "^2.2.2"
+    "react-konami-code": "^2.2.2",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.4"
   }
 }

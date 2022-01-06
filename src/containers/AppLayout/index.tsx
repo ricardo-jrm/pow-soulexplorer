@@ -36,8 +36,9 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <Box>
       <Konami action={runZ} />
-      {pathname === '/' ? (
-        <LayoutHome>{children}</LayoutHome>
+      {pathname === '/' && <LayoutHome>{children}</LayoutHome>}
+      {pathname.includes('/report/') ? (
+        children
       ) : (
         <LayoutPage>{children}</LayoutPage>
       )}
