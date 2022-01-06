@@ -105,6 +105,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/server": "^11.4.0",
     "@mui/icons-material": "^5.2.5",
+    "@react-pdf/renderer": "^2.0.21",
     "@ricardo-jrm/dervish": "^2.0.0",
     "@ricardo-jrm/echo": "^2.0.1",
     "@ricardo-jrm/empathy": "^1.0.1",

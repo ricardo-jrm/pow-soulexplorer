@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { ItemsList, ItemsListProps, ListCell, ListCol, ListRow } from '.';
+import { ItemsList, ItemsListProps, ListCol, ListRow } from '.';
 
 export default {
   title: 'Components/List',
