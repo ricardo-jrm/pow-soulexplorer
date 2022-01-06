@@ -105,7 +105,7 @@ export const Header = ({ height }: HeaderProps) => {
       case 'contract':
         return `/contract?name=${searchValue}`;
       case 'hash':
-        return `/block?hash=${searchValue}`;
+        return `/transaction?hash=${searchValue}`;
       case 'token':
       default:
         return `/token?id=${searchValue}`;
