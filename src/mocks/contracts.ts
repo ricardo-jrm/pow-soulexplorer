@@ -24,21 +24,21 @@ export const contracts: Contracts = {
     script:
       'https://github.com/phantasma-io/PhantasmaChain/blob/development/Phantasma.Blockchain/Contracts/AccountContract.cs',
     abi: `
-    Methods
+Methods
 
-    RegisterName(target:Object, name:String): None
-    UnregisterName(target:Object): None
-    RegisterScript(target:Object, script:Bytes, abiBytes:Bytes): None
-    HasScript(address:Object): Bool
-    LookUpAddress(target:Object): String
-    LookUpScript(target:Object): Bytes
-    LookUpABI(target:Object): Bytes
-    LookUpName(name:String): Object
-    Migrate(from:Object, target:Object): None
+RegisterName(target:Object, name:String): None
+UnregisterName(target:Object): None
+RegisterScript(target:Object, script:BytesabiBytes:Bytes): None
+HasScript(address:Object): Bool
+LookUpAddress(target:Object): String
+LookUpScript(target:Object): Bytes
+LookUpABI(target:Object): Bytes
+LookUpName(name:String): Object
+Migrate(from:Object, target:Object): None
     
-    Events
+Events
     
-    None.
+None.
     `,
   },
 };
