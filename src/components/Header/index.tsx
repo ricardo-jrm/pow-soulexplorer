@@ -375,22 +375,22 @@ export const Header = ({ height }: HeaderProps) => {
                 <RadioGroup value={radioValue} onChange={handleRadioChange} row>
                   <FormControlLabel
                     value="address"
-                    control={<Radio />}
+                    control={<Radio color="secondary" />}
                     label={echo('address')}
                   />
                   <FormControlLabel
                     value="contract"
-                    control={<Radio />}
+                    control={<Radio color="secondary" />}
                     label={echo('contract')}
                   />
                   <FormControlLabel
                     value="hash"
-                    control={<Radio />}
+                    control={<Radio color="secondary" />}
                     label={echo('hash')}
                   />
                   <FormControlLabel
                     value="token"
-                    control={<Radio />}
+                    control={<Radio color="secondary" />}
                     label={echo('token')}
                   />
                 </RadioGroup>
