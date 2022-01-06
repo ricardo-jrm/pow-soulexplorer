@@ -21,4 +21,9 @@ export const accounts: Accounts = {
     type: 'System',
     name: 'genesis',
   },
+  S3dGz1deZweAiMVPHL328X3pVNpANQVjgX4MoRGpbNNAfrB: {
+    address: 'S3dGz1deZweAiMVPHL328X3pVNpANQVjgX4MoRGpbNNAfrB',
+    type: 'System',
+    name: 'account',
+  },
 };
