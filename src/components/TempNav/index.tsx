@@ -74,7 +74,7 @@ export const TempNav = () => {
       </Text>
       <Text
         link={{
-          href: '/transaction',
+          href: '/transaction?hash=6DC8D95C32D1517DE55EB4D8A46BF23235CE3DCFA38079398AC01F5C182CFF55',
         }}
       >
         tx

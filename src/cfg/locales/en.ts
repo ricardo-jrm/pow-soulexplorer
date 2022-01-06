@@ -36,6 +36,7 @@ export const en: EchoMsgs = {
   'tab-script': 'Script',
   'tab-abi': 'ABI',
   'tab-members': 'Members',
+  'no-fees': 'No fees for this transaction',
   //
   'label-name': 'Name',
   'label-address': 'Address',
@@ -46,6 +47,8 @@ export const en: EchoMsgs = {
   'label-unclaimed': 'Unclaimed',
   'label-date': 'Date',
   'label-chain': 'Chain',
+  'label-hash': 'Hash',
+  'label-blockhash': 'Block Hash',
   'label-prevhash': 'Previous Hash',
   'label-tx': 'Transactions',
   'label-validator': 'Validator',
@@ -60,6 +63,9 @@ export const en: EchoMsgs = {
   'label-decimals': 'Decimals',
   'label-maxsupply': 'Total Supply',
   'label-currsupply': 'Current Supply',
+  'label-payload': 'Payload',
+  'label-result': 'Result',
+  'label-expiration': 'Expiration',
   'chip-transferable': 'Transferable',
   'chip-fungible': 'Fungible',
   //
@@ -70,5 +76,7 @@ export const en: EchoMsgs = {
   chain: 'Chain',
   contract: 'Contract',
   dao: 'DAO',
+  token: 'Token',
+  transaction: 'Transaction',
   'not-found': 'Not Found',
 };
