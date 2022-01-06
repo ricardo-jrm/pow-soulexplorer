@@ -6,7 +6,7 @@ export type Balance = {
   chain: string;
 };
 
-const balances: Balance[] = [
+export const balances: Balance[] = [
   {
     logo: '/static/v1/img/SOUL.png',
     balance: '2,950.00 SOUL',
@@ -16,7 +16,7 @@ const balances: Balance[] = [
   },
   {
     logo: '/static/v1/img/KCAL.png',
-    balance: '2,950.00 KCAL',
+    balance: '49,018.00 KCAL',
     token: 'kcal',
     value: 7346.87,
     chain: 'main',
