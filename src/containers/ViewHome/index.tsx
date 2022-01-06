@@ -233,7 +233,98 @@ export const ViewHome = () => {
                 <Text variant="h6">{echo('nexus-title')}</Text>
               </Box>
               <Box px={1} pb={3} sx={{ minHeight: '108px' }}>
-                ASD
+                <Grid container>
+                  <Grid item xs={12} md={6} pb={0.5}>
+                    <Box>
+                      <Text
+                        link={{
+                          href: '/nexus?tab=tokens',
+                        }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: furyActive.palette.secondary.main,
+                        }}
+                      >
+                        {`● ${echo('tab-tokens')}`}
+                      </Text>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6} pb={0.5}>
+                    <Box>
+                      <Text
+                        link={{
+                          href: '/nexus?tab=daos',
+                        }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: furyActive.palette.secondary.main,
+                        }}
+                      >
+                        {`● ${echo('tab-daos')}`}
+                      </Text>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6} pb={0.5}>
+                    <Box>
+                      <Text
+                        link={{
+                          href: '/chain?tab=blocks',
+                        }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: furyActive.palette.secondary.main,
+                        }}
+                      >
+                        {`● ${echo('tab-blocks')}`}
+                      </Text>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6} pb={0.5}>
+                    <Box>
+                      <Text
+                        link={{
+                          href: '/chain?tab=contracts',
+                        }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: furyActive.palette.secondary.main,
+                        }}
+                      >
+                        {`● ${echo('tab-contracts')}`}
+                      </Text>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6} pb={0.5}>
+                    <Box>
+                      <Text
+                        link={{
+                          href: '/account?address=genesis&tab=balances',
+                        }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: furyActive.palette.secondary.main,
+                        }}
+                      >
+                        {`● ${echo('tab-balances')}`}
+                      </Text>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6} pb={0.5}>
+                    <Box>
+                      <Text
+                        link={{
+                          href: '/account?address=genesis&tab=txlist',
+                        }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: furyActive.palette.secondary.main,
+                        }}
+                      >
+                        {`● ${echo('tab-txlist')}`}
+                      </Text>
+                    </Box>
+                  </Grid>
+                </Grid>
               </Box>
               <Box textAlign="center">
                 <NextLink href="/nexus" passHref>
