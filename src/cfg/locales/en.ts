@@ -56,6 +56,12 @@ export const en: EchoMsgs = {
   'label-abi': 'ABI',
   'label-id': 'ID',
   'label-size': 'Size',
+  'label-price': 'Price',
+  'label-decimals': 'Decimals',
+  'label-maxsupply': 'Total Supply',
+  'label-currsupply': 'Current Supply',
+  'chip-transferable': 'Transferable',
+  'chip-fungible': 'Fungible',
   //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',

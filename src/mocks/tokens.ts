@@ -25,9 +25,9 @@ export const tokens: Tokens = {
     price: '$3.40',
     currentSupply: '59.23M SOUL',
     decimals: 8,
-    fungibility: 'Fungible',
+    fungibility: 'chip-fungible',
     transferable: true,
-    contract: 'S3dGz1deZweAiMVPHL328X3pVNpANQVjgX4MoRGpbNNAfrB',
+    contract: 'main',
   },
   kcal: {
     id: 'kcal',
@@ -37,8 +37,8 @@ export const tokens: Tokens = {
     price: '$0.15',
     currentSupply: '35.16M KCAL',
     decimals: 10,
-    fungibility: 'Fungible',
+    fungibility: 'chip-fungible',
     transferable: true,
-    contract: 'S3dGz1deZweAiMVPHL328X3pVNpANQVjgX4MoRGpbNNAfrB',
+    contract: 'main',
   },
 };

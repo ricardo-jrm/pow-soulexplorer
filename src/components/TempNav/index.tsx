@@ -67,7 +67,7 @@ export const TempNav = () => {
       </Text>
       <Text
         link={{
-          href: '/token',
+          href: '/token?id=soul',
         }}
       >
         Token
