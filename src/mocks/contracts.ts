@@ -42,3 +42,5 @@ None.
     `,
   },
 };
+
+export const contractsArr: Contract[] = Object.values(contracts);

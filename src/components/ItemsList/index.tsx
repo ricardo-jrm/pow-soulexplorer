@@ -80,7 +80,7 @@ export const ItemsList = ({ cols, rows }: ItemsListProps) => {
             sx={{ borderBottom: `1px solid ${furyActive.palette.divider}` }}
           >
             {row.map((cell) => (
-              <Grid container alignItems="center" spacing={1} key={nanoid()}>
+              <Grid container spacing={1} key={nanoid()}>
                 <Grid item>
                   <Text sx={{ fontWeight: 600 }}>{`${echo(
                     cell.label,

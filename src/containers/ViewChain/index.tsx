@@ -8,6 +8,7 @@ import { NavTabs, NavTabRecord } from '../../components/NavTabs';
 import { NotFound } from '../../components/404';
 import { chains, Chain } from '../../mocks/chains';
 import { blocksArr } from '../../mocks/blocks';
+import { contractsArr } from '../../mocks/contracts';
 import { ChainOverview } from '../../components/ChainOverview';
 import { ItemsList, ListRow, ListCol } from '../../components/ItemsList';
 
@@ -177,7 +178,100 @@ const blockRows: ListRow[] = [
 
 const BlocksComponent = () => <ItemsList cols={blockCols} rows={blockRows} />;
 
-const ContractsComponent = () => <>Contracts</>;
+interface ContractCellProps {
+  contract: string;
+}
+const ContractCell = ({ contract }: ContractCellProps) => {
+  const { furyActive } = useFury();
+
+  return (
+    <Text
+      link={{
+        href: `/contract?name=${contract}`,
+      }}
+      sx={{
+        color: furyActive.palette.secondary.main,
+      }}
+    >
+      {contract}
+    </Text>
+  );
+};
+interface AddressCellProps {
+  address: string;
+}
+const AddressCell = ({ address }: AddressCellProps) => {
+  const { furyActive } = useFury();
+
+  return (
+    <Text
+      link={{
+        href: `/account?address=${address}`,
+      }}
+      sx={{
+        color: furyActive.palette.secondary.main,
+      }}
+      clipboard
+      spacing={1}
+    >
+      {address}
+    </Text>
+  );
+};
+
+const contractCols: ListCol[] = [
+  {
+    label: 'label-contract',
+    cols: 4,
+  },
+  {
+    label: 'label-address',
+    cols: 8,
+  },
+];
+
+const contractRows: ListRow[] = [
+  [
+    {
+      label: 'label-contract',
+      cols: 4,
+      component: <ContractCell contract={contractsArr[0].name} />,
+    },
+    {
+      label: 'label-address',
+      cols: 8,
+      component: <AddressCell address={contractsArr[0].address} />,
+    },
+  ],
+  [
+    {
+      label: 'label-contract',
+      cols: 4,
+      component: <ContractCell contract={contractsArr[1].name} />,
+    },
+    {
+      label: 'label-address',
+      cols: 8,
+      component: <AddressCell address={contractsArr[1].address} />,
+    },
+  ],
+  [
+    {
+      label: 'label-contract',
+      cols: 4,
+      component: <ContractCell contract={contractsArr[2].name} />,
+    },
+    {
+      label: 'label-address',
+      cols: 8,
+      component: <AddressCell address={contractsArr[2].address} />,
+    },
+  ],
+];
+
+const ContractsComponent = () => (
+  <ItemsList cols={contractCols} rows={contractRows} />
+);
 
 /**
  * ViewChain
