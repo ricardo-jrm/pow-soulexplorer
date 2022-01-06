@@ -72,6 +72,7 @@ export const en: EchoMsgs = {
   'label-content': 'Content',
   'label-url': 'URL',
   'label-height': 'Height',
+  'label-ticker': 'Ticker',
   'chip-transferable': 'Transferable',
   'chip-fungible': 'Fungible',
   'meta-description':

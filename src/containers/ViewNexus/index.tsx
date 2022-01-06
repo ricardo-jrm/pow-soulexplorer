@@ -1,11 +1,14 @@
+/* eslint-disable dot-notation */
 import React, { useMemo } from 'react';
 import { useFury } from '@ricardo-jrm/fury';
-import { Box } from '@ricardo-jrm/fury/dist/mui';
+import { Box, Grid } from '@ricardo-jrm/fury/dist/mui';
 import { useEcho } from '@ricardo-jrm/echo';
 import { Text } from '../../components/Text';
+import { Image } from '../../components/Image';
 import { NavTabs, NavTabRecord } from '../../components/NavTabs';
 import { ItemsList, ListRow, ListCol } from '../../components/ItemsList';
 import { chains } from '../../mocks/chains';
+import { tokens } from '../../mocks/tokens';
 import { daosArr } from '../../mocks/daos';
 
 const chain = chains.main;
@@ -95,7 +98,132 @@ const chainsRows: ListRow[] = [
 
 const ChainsComponent = () => <ItemsList cols={chainsCols} rows={chainsRows} />;
 
-const TokensComponent = () => <>TOKENS</>;
+interface TokenNameCellProps {
+  logo: string;
+  name: string;
+  id: string;
+}
+const TokenNameCell = ({ logo, name, id }: TokenNameCellProps) => {
+  const { furyActive } = useFury();
+
+  return (
+    <Grid container alignItems="center" spacing={1}>
+      <Grid item>
+        <Image src={logo} responsive height="21px" />
+      </Grid>
+      <Grid item>
+        <Text
+          link={{
+            href: `/token?id=${id}`,
+          }}
+          sx={{
+            color: furyActive.palette.secondary.main,
+          }}
+        >
+          {name}
+        </Text>
+      </Grid>
+    </Grid>
+  );
+};
+
+interface TextCellProps {
+  text: string | number;
+}
+const TextCell = ({ text }: TextCellProps) => <Text>{text}</Text>;
+
+const tokensCols: ListCol[] = [
+  {
+    label: 'label-name',
+    cols: 4,
+  },
+  {
+    label: 'label-ticker',
+    cols: 2,
+  },
+  {
+    label: 'label-decimals',
+    cols: 2,
+  },
+  {
+    label: 'label-currsupply',
+    cols: 2,
+  },
+  {
+    label: 'label-maxsupply',
+    cols: 2,
+  },
+];
+const tokensRows: ListRow[] = [
+  [
+    {
+      label: 'label-name',
+      cols: 4,
+      component: (
+        <TokenNameCell
+          name={tokens['soul'].name}
+          id={tokens['soul'].id}
+          logo={tokens['soul'].logo}
+        />
+      ),
+    },
+    {
+      label: 'label-ticker',
+      cols: 2,
+      component: <TextCell text={tokens['soul'].ticker} />,
+    },
+    {
+      label: 'label-decimals',
+      cols: 2,
+      component: <TextCell text={tokens['soul'].decimals} />,
+    },
+    {
+      label: 'label-currsupply',
+      cols: 2,
+      component: <TextCell text={tokens['soul'].currentSupply} />,
+    },
+    {
+      label: 'label-maxsupply',
+      cols: 2,
+      component: <TextCell text={tokens['soul'].maxSupply || ''} />,
+    },
+  ],
+  [
+    {
+      label: 'label-name',
+      cols: 4,
+      component: (
+        <TokenNameCell
+          name={tokens['kcal'].name}
+          id={tokens['kcal'].id}
+          logo={tokens['kcal'].logo}
+        />
+      ),
+    },
+    {
+      label: 'label-ticker',
+      cols: 2,
+      component: <TextCell text={tokens['kcal'].ticker} />,
+    },
+    {
+      label: 'label-decimals',
+      cols: 2,
+      component: <TextCell text={tokens['kcal'].decimals} />,
+    },
+    {
+      label: 'label-currsupply',
+      cols: 2,
+      component: <TextCell text={tokens['kcal'].currentSupply} />,
+    },
+    {
+      label: 'label-maxsupply',
+      cols: 2,
+      component: <TextCell text={tokens['kcal'].maxSupply || ''} />,
+    },
+  ],
+];
+
+const TokensComponent = () => <ItemsList cols={tokensCols} rows={tokensRows} />;
 
 interface MembersNameCellProps {
   name: string;
