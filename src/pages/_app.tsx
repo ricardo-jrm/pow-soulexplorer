@@ -20,10 +20,6 @@ const SoulExplorerApp: ReactNode = ({
   <CacheProvider value={emotionCache}>
     <AppProvider>
       <AppLayout>
-        <Head>
-          <title>Phantasma Chain Explorer</title>
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
-        </Head>
         <Component {...pageProps} />
       </AppLayout>
     </AppProvider>

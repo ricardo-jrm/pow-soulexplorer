@@ -68,6 +68,8 @@ export const en: EchoMsgs = {
   'label-expiration': 'Expiration',
   'chip-transferable': 'Transferable',
   'chip-fungible': 'Fungible',
+  'meta-description':
+    'Explore the blockchain, wallet addresses, contracts, tokens, and transactions.',
   //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',

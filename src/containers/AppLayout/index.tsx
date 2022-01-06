@@ -4,6 +4,7 @@ import Konami from 'react-konami-code';
 import { Box, Dialog } from '@ricardo-jrm/fury/dist/mui';
 import { LayoutHome } from '../LayoutHome';
 import { LayoutPage } from '../LayoutPage';
+import { MetaTags } from '../../components/MetaTags';
 import {
   kaioken,
   superSaiyan,
@@ -35,6 +36,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
 
   return (
     <Box>
+      <MetaTags />
       <Konami action={runZ} />
       {pathname === '/' ? (
         <LayoutHome>{children}</LayoutHome>

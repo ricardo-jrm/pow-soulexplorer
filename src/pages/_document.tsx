@@ -11,8 +11,6 @@ export default class MyDocument extends Document {
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
-          <link rel="icon" type="image/png" href="/static/v1/img/favicon.png" />
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
