@@ -5,7 +5,7 @@ import {
   Text,
   View,
   StyleSheet,
-} from '@react-pdf/renderer/lib/react-pdf.browser.es.js';
+} from '@react-pdf/renderer/lib/react-pdf.browser.cjs.js';
 
 const styles = StyleSheet.create({
   page: {
