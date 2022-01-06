@@ -8,7 +8,32 @@ import { NotFound } from '../../components/404';
 import { transactions, Tx } from '../../mocks/tx';
 import { TxOverview } from '../../components/TxOverview';
 
-const ScriptComponent = () => <>Script</>;
+interface ScriptProps {
+  script?: string;
+}
+const ScriptComponent = ({ script }: ScriptProps) => {
+  if (!script) {
+    return null;
+  }
+
+  return (
+    <pre
+      style={{
+        wordBreak: 'break-all',
+        margin: '0px',
+        fontSize: '12px',
+        backgroundColor: '#cacaca',
+        color: '#000',
+        paddingLeft: '21px',
+        paddingRight: '21px',
+        borderRadius: '3px',
+        overflow: 'auto',
+      }}
+    >
+      {script}
+    </pre>
+  );
+};
 
 const EventsComponent = () => <>Events</>;
 
@@ -36,7 +61,7 @@ export const ViewTransaction = () => {
         id: 'script',
         label: echo('tab-script'),
         href: '/transaction',
-        component: <ScriptComponent />,
+        component: <ScriptComponent script={transaction?.script} />,
       },
       events: {
         id: 'events',

@@ -71,6 +71,7 @@ export const ContractOverview = ({ contract }: ContractOverviewProps) => {
                 paddingLeft: '21px',
                 paddingRight: '21px',
                 borderRadius: '3px',
+                overflow: 'auto',
               }}
             >
               {contract.abi}
