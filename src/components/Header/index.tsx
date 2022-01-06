@@ -8,6 +8,13 @@ import {
   Tooltip,
   Menu,
   MenuItem,
+  Dialog,
+  Paper,
+  TextField,
+  Radio,
+  RadioGroup,
+  FormControl,
+  FormControlLabel,
 } from '@ricardo-jrm/fury/dist/mui';
 import { useFury } from '@ricardo-jrm/fury';
 import { usePain } from '@ricardo-jrm/pain';
@@ -16,6 +23,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CloseIcon from '@mui/icons-material/Close';
 import { Text } from '../Text';
 import { Image } from '../Image';
 
@@ -71,6 +79,38 @@ export const Header = ({ height }: HeaderProps) => {
   const handleCloseLocales = useCallback(() => {
     anchorLocalesSet(null);
   }, []);
+
+  const [openSearch, openSearchSet] = useState(false);
+  const handleSearchOpen = useCallback(() => openSearchSet(true), []);
+  const handleSearchClose = useCallback(() => openSearchSet(false), []);
+
+  const [radioValue, radioValueSet] = useState('address');
+  const handleRadioChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) =>
+      radioValueSet((e.target as HTMLInputElement).value),
+    [],
+  );
+
+  const [searchValue, searchValueSet] = useState('');
+  const handleSearchChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      searchValueSet(event.target.value);
+    },
+    [],
+  );
+  const searchQuery = useMemo(() => {
+    switch (radioValue) {
+      case 'address':
+        return `/account?address=${searchValue}`;
+      case 'contract':
+        return `/contract?name=${searchValue}`;
+      case 'hash':
+        return `/block?hash=${searchValue}`;
+      case 'token':
+      default:
+        return `/token?id=${searchValue}`;
+    }
+  }, [radioValue, searchValue]);
 
   return (
     <Box
@@ -142,7 +182,7 @@ export const Header = ({ height }: HeaderProps) => {
           <Box textAlign="right">
             <Box display="inline-block" pr={{ xs: 0.5, md: 1.5 }}>
               <Tooltip title={echo('tooltip-search')}>
-                <IconButton size="small">
+                <IconButton size="small" onClick={handleSearchOpen}>
                   <SearchIcon
                     sx={{
                       fontSize: furyActive.typography.h5.fontSize,
@@ -297,6 +337,80 @@ export const Header = ({ height }: HeaderProps) => {
           Français
         </MenuItem>
       </Menu>
+      <Dialog open={openSearch} onClose={handleSearchClose} fullWidth>
+        <Paper>
+          <Box pt={2} px={2}>
+            <Grid container justifyContent="space-between" alignItems="center">
+              <Grid item>
+                <Text variant="h6">{echo('search')}</Text>
+              </Grid>
+              <Grid item>
+                <Tooltip title={echo('close')}>
+                  <IconButton size="small" onClick={handleSearchClose}>
+                    <CloseIcon />
+                  </IconButton>
+                </Tooltip>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box px={2} pb={2} pt={1}>
+            <Box>
+              <TextField
+                variant="outlined"
+                color="secondary"
+                fullWidth
+                value={searchValue}
+                onChange={handleSearchChange}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearchClose();
+                    push(searchQuery);
+                  }
+                }}
+                // label={echo('search')}
+              />
+            </Box>
+            <Box pt={2}>
+              <FormControl component="fieldset">
+                <RadioGroup value={radioValue} onChange={handleRadioChange} row>
+                  <FormControlLabel
+                    value="address"
+                    control={<Radio />}
+                    label={echo('address')}
+                  />
+                  <FormControlLabel
+                    value="contract"
+                    control={<Radio />}
+                    label={echo('contract')}
+                  />
+                  <FormControlLabel
+                    value="hash"
+                    control={<Radio />}
+                    label={echo('hash')}
+                  />
+                  <FormControlLabel
+                    value="token"
+                    control={<Radio />}
+                    label={echo('token')}
+                  />
+                </RadioGroup>
+              </FormControl>
+            </Box>
+            <Box textAlign="right" pt={1}>
+              <Button
+                color="secondary"
+                variant="contained"
+                onClick={() => {
+                  handleSearchClose();
+                  push(searchQuery);
+                }}
+              >
+                {echo('apply')}
+              </Button>
+            </Box>
+          </Box>
+        </Paper>
+      </Dialog>
     </Box>
   );
 };

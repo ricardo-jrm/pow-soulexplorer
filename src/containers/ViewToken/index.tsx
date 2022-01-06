@@ -40,7 +40,7 @@ export const ViewToken = () => {
         </Box>
       ) : (
         <Box py={3}>
-          <NotFound kind="account" />
+          <NotFound kind="token" />
         </Box>
       )}
     </Box>

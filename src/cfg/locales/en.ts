@@ -71,7 +71,12 @@ export const en: EchoMsgs = {
   //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',
+  close: 'Close',
+  apply: 'Apply',
+  search: 'Search',
   account: 'Account',
+  address: 'Address',
+  hash: 'Hash',
   block: 'Block',
   chain: 'Chain',
   contract: 'Contract',
