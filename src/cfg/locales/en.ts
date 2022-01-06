@@ -37,7 +37,6 @@ export const en: EchoMsgs = {
   'tab-abi': 'ABI',
   'tab-members': 'Members',
   'no-fees': 'No fees for this transaction',
-  //
   'label-name': 'Name',
   'label-address': 'Address',
   'label-blockheight': 'Block Height',
@@ -77,7 +76,6 @@ export const en: EchoMsgs = {
   'chip-fungible': 'Fungible',
   'meta-description':
     'Explore the blockchain, wallet addresses, contracts, tokens, and transactions.',
-  //
   'copy-to-clipboard': 'Copy to clipboard',
   'copied-to-clipboard': 'Copied to clipboard',
   close: 'Close',
